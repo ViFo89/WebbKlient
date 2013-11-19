@@ -8,15 +8,75 @@
 		<h1>Grunderna i HTML5</h1>
 		<h2>Begrepp och struktur</h2>
 		<h3>Doctype</h3>
-		<p>&lt!DOCTYPE&gt är inte i sig en HTML-tag utan en instruktion till webbläsaren vilken HTML-version sidan är skriven i. &lt!DOCTYPE&gt är det absolut första som ska finnas i HTML-dokumentet och för HTML5 bör taggen se ut på detta vis: &lt!DOCTYPE HTML&gt</p>
-		<h3>Teckenkod</h3>
-		<p>Teckenkodning i ett HTML-dokument specificerar vilken teckenkodning som ska användas i dokumentet. I sverige använder man ofta teckenkodningen UTF-8, med den kan man visa de svenska tecknen Å, Ä och Ö. UTF-8 stödjer även endel andra icke-engelska tecken. Taggen ska skrivas inom &lthead&gt-taggen och ska se ut på detta vis: &ltmeta charset="UTF-8"&gt.</p>
-		<h3>Språk</h3>
-		<p>Det kan vara bra att ange vilket språk hemsidan är skriven på. Denna information kan användas av bl.a. sökmotorer för att visa din sida för personer som t.ex. skulle vilja ha en sida på Svenska. Man anger språket genom att lägga till attributet "lang" i &lthtml&gt-taggen. Det ser ut såhär: &lthtml lang="sv"&gt</p>
-		<h3>Validering</h3>
-		<p>För att se att sidan som man skapar följer standarden kan man använda verktyg som <a href="http://validator.w3.org">W3C Markup Validation Service</a>. Sådana verktyg kan även upptäcka om taggar som borde finnas saknas och om en starttag inte efterföljs av en sluttag.</p>
-		<h3>HTML-Dokumentets uppbyggnad</h3>
-		<p>Ett HTML-dokument är uppbyggt av taggar som anger hur en webläsare ska tolka dokumentet. Det finns flera typer av taggar
+		<p>
+			&lt!DOCTYPE&gt är inte i sig en HTML-tag utan en instruktion till webbläsaren vilken HTML-version sidan är skriven i. &lt!DOCTYPE&gt är det absolut första som ska finnas i HTML-dokumentet och för HTML5 bör taggen se ut på detta vis: &lt!DOCTYPE HTML&gt
 		</p>
+		<h3>Teckenkod</h3>
+		<p>
+			Teckenkodning i ett HTML-dokument specificerar vilken teckenkodning som ska användas i dokumentet. I sverige använder man ofta teckenkodningen UTF-8, med den kan man visa de svenska tecknen Å, Ä och Ö. UTF-8 stödjer även endel andra icke-engelska tecken. Taggen ska skrivas inom &lthead&gt-taggen och ska se ut på detta vis: &ltmeta charset="UTF-8"&gt.
+		</p>
+		<h3>Språk</h3>
+		<p>
+			Det kan vara bra att ange vilket språk hemsidan är skriven på. Denna information kan användas av bl.a. sökmotorer för att visa din sida för personer som t.ex. skulle vilja ha en sida på Svenska. Man anger språket genom att lägga till attributet "lang" i &lthtml&gt-taggen. Det ser ut såhär: &lthtml lang="sv"&gt
+		</p>
+		<h3>Validering</h3>
+		<p>
+			För att se att sidan som man skapar följer standarden kan man använda verktyg som <a href="http://validator.w3.org">W3C Markup Validation Service</a>. Sådana verktyg kan även upptäcka om taggar som borde finnas saknas och om en starttag inte efterföljs av en sluttag.
+		</p>
+		<h3>HTML-Dokumentets uppbyggnad</h3>
+		<p>
+			Ett HTML-dokument är uppbyggt av taggar som anger hur en webläsare ska tolka dokumentet. Det finns flera typer av taggar, partaggar, som har en starttagg och en sluttagg: &ltdiv&gt&lt/div&gt. Sen finns det även solotaggar: &ltbr /&gt. I solotaggar är snedstrecket valbart.
+			I ett HTML-dokument ska det finnas vissa partaggar. Dessa taggar behöver komma i en viss struktur: &lthtml&gt&lthead&gt&lt/head&gt&ltbody&gt&lt/body&gt&lt/html&gt. Det är dock att föredra att man formaterar dom lite snyggar än såhär!
+		</p>
+		<h2>Taggar</h2>
+		<h3>&lthtml&gt</h3>
+		<p>Visar webläsaren att finns html-kod i dokumentet.</p>
+		<h3>&lthead&gt</h3>
+		<p>
+			Är en tag som beskriver sidan genom andra taggar som &lttitle&gt, &ltmeta&gt, &ltstyle&gt o.s.v.
+		</p>
+		<h3>&ltbody&gt</h3>
+		<p>Det är innanför den här taggen man skriver allt som ska visas.</p>
+		<h3>&lttitle&gt</h3>
+		<p>Den här taggen anger titeln för sidan.</p>
+		<h3>&ltmeta&gt</h3>
+		<p>
+			&ltmeta&gt-taggen ska alltid skrivas innanför &lthead&gt-taggen. &ltmeta&gt-taggen används oftast för att beskriva hemsidan och gör ingenting i sin ensamhet. Därför lägger man till attribut till den.<br/>
+			Attribut som kan användas till &ltmeta&gt-taggen är:<br/>
+			<ul>
+				<li><b>http-equiv</b> - Information som skickas först till webbläsare. Det kan t.ex. vara information om att sidan ska uppdateras efter en viss tid.</li>
+				<li><b>name</b> - Detta attribut anger namnet på metadatan. Informationen anges sedan i attributet content. De olika namnvärdena man kan ange är de som är under.</li>
+				<li><b>author</b> - Anger namnet på den som skapat dokumentet. &ltmeta name="author" content="Victor Förnemark"&gt</li>
+				<li><b>description</b> - Här kan man ange information om sidan. Denna information används av sökmoterer och denna information kan visas när sökmotorn angivit hemsidan som ett sökresultat. &ltmeta name="description" content="En sida om HTML"&gt</li>
+				<li><b>generator</b> - Anges om man har använt en speciell editor för att skapa sidan, t.ex. dreamweaver eller frontpage. &ltmeta name="generator" content="FrontPage 4.0"&gt</li>
+				<li><b>keywords</b> - Nyckelord som beskriver hemsidan. Används av sökmotorer för att ta reda på vad sidan handlar om. &ltmeta name="keywords" content="HTML, lära, hemsida"&gt</li>
+				<li><b>robots</b> - Används för att ge information till sökmotorspindlar. För att t.ex. indexera sidan på en sökmotor. &ltmeta name="robots" content="index, follow" &gt</li>
+			</ul>
+		</p>
+		<h3>Text</h3>
+		 <ul>
+		 	<li><b>abbr</b></li>
+		 	<li><b>address</b></li>
+		 	<li><b>blockquote</b></li>
+		 	<li><b>br</b></li>
+		 	<li><b>cite</b></li>
+		 	<li><b>code</b></li>
+		 	<li><b>dfn</b></li>
+		 	<li><b>div</b></li>
+		 	<li><b>em</b></li>
+		 	<li><b>h1</b></li>
+		 	<li><b>h2</b></li>
+		 	<li><b>h3</b></li>
+		 	<li><b>h4</b></li>
+		 	<li><b>h5</b></li>
+		 	<li><b>h6</b></li>
+		 	<li><b>kbd</b></li>
+		 	<li><b>p</b></li>
+		 	<li><b>pre</b></li>
+		 	<li><b>q</b></li>
+		 	<li><b>samp</b></li>
+		 	<li><b>span</b></li>
+		 	<li><b>strong</b></li>
+		 	<li><b>var</b></li>
 	</body>
 <html>
