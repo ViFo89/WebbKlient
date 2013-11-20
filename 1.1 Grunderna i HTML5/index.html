@@ -76,5 +76,71 @@
 			 	<li><b>var</b> - Definierar en variabel. Renderas såhär: <var>books_al</var></li>
 			 </ul>
 		</p>
+		<h3>Hypertext</h3>
+		<p>
+			Hypertext är ett sätt att navigera sig på en hemsida. Antingen inom hemsidan i sig, eller till andra hemsidor. En hyperlänk skrivs med taggen &lta&gt. I sin ensamhet gör taggen ingenting men med attributet <code>href</code> blir det en länk.<br/>
+			En relativ länk är bra att använda om man vill navigera sig inom hemsidan som man redan befinner sig på. Man skriver då mapparna man ska behöva ta sig igenom för att komma till den önskade sidan. Exempel:
+			<code>&lta href="mapp1/mapp2/sida.html"&gtLänk&lt/a&gt</code>
+			<br/>En absolut länk är en länk där man anger http-adressen för länkens destination. Denna typ av länk är den som ska användas för att ta sig till andra hemsidor och ser ut såhär: <code>&lta href="http://google.se"&gtLänk&lt/a&gt</code>
+			<br/>Ett så kallat ankare är en länk som används för att navigera sig inom det dokument man är på. T.ex. om man vill hitta en viss del i en lång text. Länken ser ut såhär: <code>&lta href="#namn_pa_ankare"&gtLänk&lt/a&gt</code>. Delen som ankaret ska leda till ska se ut såhär: <code>&lta name="namn_pa_ankare"&gtLänk&lt/a&gt</code>
+			<br/>En bildlänk är helt enkelt en länk där man istället för text använder en bild. Ser ut såhär: <code>&lta href="http://google.se"&gt&ltimg src="bild.jpg"&gt&lt/a&gt</code>
+			<br/>Man kan även länka till en e-post adress: <code>&lta href="mailto:min@epost.se"&gtMail&lt/a&gt</code>
+		</p>
+		<h3>Listor</h3>
+		<p>
+			Ibland kan man vilja lista saker. Det finns ett par olika sorters listor i HTML. 
+			<ul>
+				<li>
+					<b>&ltdl&gt</b> - Är en beskrivningslista. Kod:<br/>
+					<code>
+						&ltdl&gt<br/>
+						&ltdt&gtBlyerts&lt/dt&gt<br/>
+						&ltdd&gtGår att sudda&lt/dd&gt<br/>
+						&ltdt&gtBläck&lt/dt&gt<br/>
+						&ltdd&gtGår inte att sudda&lt/dd&gt<br/>
+						&lt/dl&gt
+					</code>
+					<br/>&ltdt&gt är namnet och &ltdd&gt är beskrivningen. Renderas såhär:
+					<dl>
+						<dt>Blyerts</dt>
+							<dd>Går att sudda</dd>
+						<dt>Bläck</dt>
+							<dd>Går inte att sudda</dd>
+					</dl>
+
+				</li>
+				<li>
+					<b>&ltol&gt</b> - Står för ordered list och används för en så kallad ordnad lista. Kod:<br/>
+					<code>
+						&ltol&gt<br/>
+						&ltli&gtEtt&lt/li&gt<br/>
+						&ltli&gtTvå&lt/li&gt<br/>
+						&ltli&gtTre&lt/li&gt<br/>
+						&lt/ol&gt
+					</code>
+					<br/>Renderas såhär:
+					<ol><br/>
+					<li>Ett</li>
+					<li>Två</li>
+					<li>Tre</li>
+					</ol>
+				</li>
+				<li>
+					<b>&ltul&gt</b> - Står för unordered list och används för en så kallad oordnad lista. Kod:<br/>
+					<code>
+						&ltul&gt<br/>
+						&ltli&gtEtt&lt/li&gt<br/>
+						&ltli&gtTvå&lt/li&gt<br/>
+						&ltli&gtTre&lt/li&gt<br/>
+						&lt/lu&gt
+					</code>
+					<br/>Renderas såhär:
+					<ul>
+					<li>Ett</li>
+					<li>Två</li>
+					<li>Tre</li>
+					</ul>
+			</ul>
+		</p>
 	</body>
 <html>
