@@ -136,11 +136,105 @@
 					</code>
 					<br/>Renderas såhär:
 					<ul>
-					<li>Ett</li>
-					<li>Två</li>
-					<li>Tre</li>
+						<li>Ett</li>
+						<li>Två</li>
+						<li>Tre</li>
 					</ul>
+				</li>
 			</ul>
 		</p>
+		<h3>Tabeller</h3>
+		<ul>
+			<li><b>caption</b> - Fungerar som en rubrik för tabellen. Måste komma efter table-taggen.</li>
+			<li><b>col</b> - Delar upp kolumnerna i grupper. Ska skrivas innanför &ltcolgroup&gt.</li>
+			<li><b>colgroup</b> - Specifierar en grupp av en eller fler kolumner i en tabell för formatering.</li>
+			<li><b>table</b> - Är den tagg som ska omsluta de andra table-taggarna.</li>
+			<li><b>tbody</b> - Anger kroppen på en tabell. Denna tagg används tillsammans med tfoot och thead och behövs egentligen inte.</li>
+			<li><b>td</b> - Definierar en tabellkolumn.</li>
+			<li><b>tfoot</b> - Anger foten av en tabell. Denna tagg används tillsammans med tbody och thead och behövs egentligen inte.</li>
+			<li><b>th</b> - Rubriken för en kolumn.</li>
+			<li><b>thead</b> - Anger huvudet av en tabell. Denna tagg används tillsammans med tbody och tfoot och behövs egentligen inte.</li>
+			<li><b>tr</b> - Definierar en tabellrad.</li>
+		</ul>
+		
+		<code>
+<pre>
+&lttable border="1"&gt
+	&ltcaption&gtcaption&lt/caption&gt
+	&ltcolgroup&gt
+		&ltcol span="2" style="background-color:red"&gt
+		&ltcol style="background-color:yellow"&gt
+	&lt/colgroup&gt
+	&ltthead&gt
+		&lttr&gt
+			&ltth&gtth&lt/th&gt
+			&ltth&gtth&lt/th&gt
+			&ltth&gtth&lt/th&gt
+			&ltth&gtth&lt/th&gt
+		&lt/tr&gt
+	&lt/thead&gt
+	&lttbody&gt
+		&lttr&gt
+			&lttd&gttd&lt/td&gt
+			&lttd&gttd&lt/td&gt
+			&lttd&gttd&lt/td&gt
+			&lttd&gttd&lt/td&gt
+		&lt/tr&gt
+		&lttr&gt
+			&lttd&gttd&lt/td&gt
+			&lttd&gttd&lt/td&gt
+			&lttd&gttd&lt/td&gt
+			&lttd&gttd&lt/td&gt
+		&lt/tr&gt
+	&lttbody&gt
+	&lttfoot&gt
+		&lttr&gt
+			&lttd&gttd&lt/td&gt
+			&lttd&gttd&lt/td&gt
+			&lttd&gttd&lt/td&gt
+			&lttd&gttd&lt/td&gt
+		&lt/tr&gt
+	&lt/tfoot&gt
+&lt/table&gt
+		</pre>
+		</code>
+		<p>Renderas:</p>
+		<table border="1">
+		  	<caption>caption</caption>
+		  		<colgroup>
+			 		<col span="2" style="background-color:red">
+					<col style="background-color:yellow">
+				</colgroup>
+		  	<thead>
+			  	<tr>
+			    	<th>th</th>
+			    	<th>th</th>
+			    	<th>th</th>
+			    	<th>th</th>
+			  	</tr>
+		  	</thead>
+		  	<tbody>
+			  	<tr>
+			    	<td>td</td>
+			    	<td>td</td>
+			    	<td>td</td>
+			    	<td>td</td>
+			  	</tr>
+			  	<tr>
+			    	<td>td</td>
+			    	<td>td</td>
+			    	<td>td</td>
+			    	<td>td</td>
+			  	</tr>
+			</tbody>
+		  	<tfoot>
+			  	<tr>
+			    	<td>td</td>
+			    	<td>td</td>
+			    	<td>td</td>
+			    	<td>td</td>
+			  	</tr>
+		  	</tfoot>
+		</table>
 	</body>
 <html>
