@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Grunderna i HTML5</title>
+		<title>1.1 Grunderna i HTML5</title>
 		<meta charset="UTF-8">
 	</head>
 	<body>
@@ -157,8 +157,9 @@
 			<li><b>tr</b> - Definierar en tabellrad.</li>
 		</ul>
 		
-		<code>
+		
 <pre>
+	<code>
 &lttable border="1"&gt
 	&ltcaption&gtcaption&lt/caption&gt
 	&ltcolgroup&gt
@@ -196,8 +197,8 @@
 		&lt/tr&gt
 	&lt/tfoot&gt
 &lt/table&gt
+</code>
 		</pre>
-		</code>
 		<p>Renderas:</p>
 		<table border="1">
 		  	<caption>caption</caption>
@@ -236,5 +237,26 @@
 			  	</tr>
 		  	</tfoot>
 		</table>
+
+		<h3>Bilder</h3>
+		<p>
+			För att lägga upp en bild på en hemsida skriver man solotaggen &ltimg&gt med attributet src. Src ska sättas lika med bildens sökväg. Bilder kan även omslutas av &lta&gt för att bli en länk.
+			<br/> Exempel: <code>&ltimg src="bild.png"&gt</code>
+		</p>
+		<h3>&ltmap&gt/&ltarea&gt</h3>
+		<p>
+			Används för att göra en den av en bild klickbar. Man definierar först en bild genom img-taggen och lägger till attributet usemap.
+			<br/>Exempel:<br/>
+			<code>
+			&ltimg src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"&gt<br/>
+
+			&ltmap name="planetmap"&gt<br/>
+			  &ltarea shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun"&gt<br/>
+			  &ltarea shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury"&gt<br/>
+			  &ltarea shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"&gt<br/>
+			&lt/map&gt
+			</code>
+			<br/>Shape-attributet definierar vilken form den klickbara arean ska ha.
+		</p>
 	</body>
-<html>
+</html>

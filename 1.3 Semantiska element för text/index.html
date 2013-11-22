@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>1.3 Semantiska element för text</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<ul>
+			<li>	
+				<b>mark</b> - Med den här taggen kan man markera text. Ex. Jag heter <mark>Victor</mark>.
+			</li>
+			<li>
+				<b>wbr</b> - Om man har ett långt ord kan man använda den här taggen för att specifiera vart ordet kan brytas ifall det skulle vara för långt för att visas. Ex. Jag<wbr>heter<wbr>victor. Exemplet fungerar om du testar att förminska weblsäsaren, sen sammansatta meningen kommer då delta sig där det borde vara mellanslag.
+			</li>
+			<li>
+				<b>time/datetime</b> - time används för att ange tid. Ex. <code>&lttime&gt10:00&lt/time&gt</code>. Man kan använda attributet datetime ifall man skriver en dag där datumet inte specifieras i klartext. Ex. <code>&lttime datetime="2013-12-24"&gtJul&lt/time&gt</code>. Man kan gå så långt som sekunder och skriva vilken tidszon det gäller. Ex. <code>&lttime datetime="YYYY-MM-DDThh:mm:ssTZD"&gt</code>
+			</li>
+			<li>
+				<b>hcard</b> - Används för att märka upp kontaktinformation. Ex.<br/>
+				<code>
+					&ltdiv class="vcard"&gt <br>
+						&ltspan class="fn"&gtVictor Förnemark&lt/span&gt<br>
+						&ltspan class="tel"&gt07070707&lt/span&gt<br>
+					&lt/div&gt
+				</code>
+			</li>
+			<li>
+				<b>hcalendar</b> - Används för att märka upp händelser.<br>
+				<code>
+					&ltdiv class="vevent"&gt<br>
+					&lth2 class="summary"&gtWeb Developer Clam Bake&lt/h2&gt<br>
+					&ltp&gtI'm hosting a party!&lt/p&gt<br>
+					&ltp&gtIt's<br>
+					&ltspan class="dtstart" title="2011-10-25T13:30"&gtTuesday, October 25,<br>
+					1:30PM&lt/span&gt<br>
+					at the &ltspan class="location"&gtDeep Sea Hotel, San Francisco, CA&lt/span&gt&lt/p&gt<br>
+					&lt/div&gt<br>
+				</code>
+			</li>
+		</ul>
+	</body>
+</html>
