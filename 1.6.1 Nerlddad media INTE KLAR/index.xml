@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rss version="2.0">
+  <channel>
+     <title>Victors podcast</title>
+     <link>http://people.dsv.su.se/~vifo8695/rss/index.xml</link>
+     <description>En fet låt och en fet video!</description>
+     <language>sv</language>
+     <copyright>None</copyright>
+     <lastBuildDate>Mon, 25 Dec 2013 12:10</lastBuildDate>
+     <ttl>240</ttl>
+        <item>
+           <title>Morning Mood - orchestral</title>
+           <link>http://www.mfiles.co.uk/mp3-downloads/edvard-grieg-peer-gynt1-morning-mood.mp3</link>
+           <description>Morning Mood - orchestral</description>
+           <pubDate>Mon, 25 Dec 2013 12:10</pubDate>
+           <author>Edvard Grieg</author>
+        </item>
+        <item>
+           <title>QuickTime</title>
+           <link>http://people.dsv.su.se/~vifo8695/rss/sample_mpeg4.mp4</link>
+           <description>QuickTime</description>
+           <pubDate>Mon, 25 Dec 2013 12:10</pubDate>
+           <author>QuickTime</author>
+        </item>
+        <item>
+      <title>Asian Elephants in Peril</title>
+      <link>http://people.dsv.su.se/~vifo8695/rss/sample_mpeg4.mp4</link>
+      <description>Quicktime loggan</description>
+      <enclosure url="http://people.dsv.su.se/~vifo8695/rss/sample_mpeg4.mp4" type="video/mp4"/>
+      <pubDate>Mon, 18 Nov 2013 01:31:00 -0800</pubDate>
+    </item>
+</channel>
+</rss>

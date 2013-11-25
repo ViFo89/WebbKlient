@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1.5.1 Bitmappad bild</title>
+	</head>
+	<body>
+		<h1>Bitmappade bilder</h1>
+		<h2>PNG</h2>
+		<p>PNG står för Portable Network Graphics. Bildformatet är främst populärt för icke fotografiska bilder. PNG togs fram som en ersättare för GIF, och är både kraftfullare och effektivare. Här är en PNG-bild: <br><img src="pic1.png"></p>
+		
+		<h2>GIF</h2>
+		<p>GIF står för Graphics Interchange Format. GIF-formatet innehåller endast 256 färger. Här är samma bild i GIF-format:<br><img src="pic1.gif"></p>
+		
+		<h2>Moving-GIF</h2>
+		<p>Moving-GIF är en GIF som blivit animerad och rör sig. Exempel:<br> <img src="pic2.gif"></p>
+		
+		<h2>JPEG</h2>
+		<p>JPEG står för Joint Photographic Experts Group och är bra för fotografiska bilder. Dock är JPEG olämplig för ritningar eller datorskapade bilder. Exempel: <br><img src="pic1.jpg"></p>
+
+		<h2>Förklaring av begrepp</h2>
+		<h3>Transparens</h3>
+		<p>Ibland kan en bild som man vill använda till sin hemsida inte ha samma bakgrund som hemsidan. Detta kan se ganska fult ut. Därför kan endel bild-format hantera genomskinlighet som gör att bakgrunden av bilden blir genomskinlig. Här har vi två bilder, en som har genomskinlig bakgrund och en som inte har det.
+		<div style="background-color:#b0c4de;  border:2px solid; padding:10px; width:500"><img src="kyckl1.gif"><img src="kyckl2.gif"></div><br> Detta fungerar bara på GIF och PNG.</p>
+		<h3>Sammanflätning och progressivitet</h3>
+		<p>
+			Sammanflätade GIF-bilder lagrar icke angränsade linjer tillsammans vilket gör att när bilden läses in så är den först suddig för att bli mer och mer tydlig och i fokus i takt med att mer bildinformation lästs in. Sammanflätade bilder passar bäst för större bilder utan text då texten lätt blir oläslig. 
+		</p><br>
+		<figure>
+		  <img src="interlacing.gif" alt="interlacing">
+		  	<figcaption>
+		  		Exempel på hur sammanflätning fungerar.
+			</figcaption>
+		</figure>
+		<p>
+			Progressivitet gör så att en bild snabbt kan hämtas i låg upplösning för att sedan hämta hem resten av bilden för att kvalitén ska bli bättre.
+		</p>
+		<figure>
+		  <img src="progressive.jpg" alt="progressive">
+		  	<figcaption>
+		  		Exempel på hur progressivitet fungerar.
+			</figcaption>
+		</figure>
+		<h3>Animation</h3>
+		<p>Animation är när en bild rör på sig. En animation skapas genom att lägga flera bilder efter varandra.</p>
+		<h3>Hur bitdjupet och komrimeringsgraden påverkar filstorleken</h3>
+		<p>
+			Bitdjup är hur mycket färg som kan lagras i varje pixel. Om en pixel enbart hade bitdjupet 1 skulle den bara kunna ha två färger. Bitdjup 8 kan ha 256 färger. Detta är då direkt kopplat till filstorleken. Om en bild som är 100x100 pixlar stor skulle ha bitdjup 1 skulle färgerna ta upp 100*100*2=20000, om bitdjupet skulle vara 8: 100*100*256=2560000. Detta stämmer säkert inte till 100% men principen är rätt.
+		</p>
+		<p>
+			Ju högre komprimeringsgrad en bild har ju mindre blir filstorleken, kvalitén försämras också. 
+		</p>
+	</body>
+</html>
