@@ -2,9 +2,44 @@
 <html>
 	<head>
 		<meta charset="utf8">
-		<title></title>
+		<title>2.1 Grunderna i CSS 3</title>
 	</head>
 	<body>
+		<h1>Grunderna i CSS 3</h1>
+		<figure>
+  			<img src="cssexample.png" alt="CSS example">
+  			<figcaption>Fig 1. - Exempel på hur ett CSS-element ser ut. </figcaption>
+		</figure> 
 
+		<h2>Externt länkad CSS-fil och dess fördelar</h2>
+		<p>
+			Det finns både externt och internt style sheets. Den interna är när man har ett dokuments style i dokumentet, t.ex. när man skriver CSS i <code>&ltstyle&gt</code>-taggen direkt i HTML-dokumentet. Sen finns det externt länkat style sheet. Då skriver man CSS i ett separat style sheet-dokument som man sedan anger i HTML-dokumentet. Det externa sättat är ofta att föredra. Tänkt dig att du har en grön hemsida, men du kommer på att du istället vill att den ska vara blå! Om du använder dig av intern CSS måste du gå till varje HTML-dokument och ändra från grön till blå, det kan både vara tidskrävande och det kan vara lätt att missa vissa hemsidor. Om du istället har ett externt CSS-dokument som alla HTML-sidor använder sig av behöver du bara ändra den gröna färgen till blå på ett ställe och ändringen kommer ske på alla HTML-sidor. Ett externt style sheet-dokument ser även till att dokumentstorleken går ner för HTML-dokumenten eftersom man flyttar ut kod från massor av dokument och lagrar den i ett eget dokument. Detta kan kallas för <abbr>DRY<abbr>-kod (Don't repeat yourself). Ett externt style sheet får även hemsidor att ladda snabbare eftersom webläsaren sparar style sheetet i chachen.
+		</p>
+		<h2>Arv</h2>
+		<p></p>
+		<h2>Cascade</h2>
+		<p></p>
+		<h2>Selektorer</h2>
+		<p>
+			En selektor är den del som bestämmer vilket HTML-element som ska påverkas av stylingen. I figur 1 ser vi att det står <cite>p</cite>. Det betyder att allt som står innanför måsvingarna ska gälla på <code>&ltp&gt</code>-taggar. Alltså en tagg-selektor
+		</p>
+		<p>
+			Det finns även klass-, id- och barn-selektorer. Klass-selektorer är om man vill skapa en flera taggar som ska stylas på ett visst sätt. För att göra en så att en tagg påverkas av en klass-selektor anger man attributet <code>class</code> följt av namnet på klassen. En klass-selektor skapas genom att sätta en punkt innan klassnamnet i style-sheeten. <code>.klassnamn{}</code> skulle alltså påverka alla HTML-taggar med attributet <code>class="klassnamn"</code>.
+		</p>
+		<p>
+			En id-selektor är precis som klass-selektorn ett sätta att skilja två likadana taggar från varandra men till skillnad från klass så är id tänkt att bara ha en tagg. Man skapar en id-selektor genom att sätta en hashtag innan id-namnet i style-sheeten. Alltså skulle <code>#idnamn{}</code> påverka den HTML-taggen med attributet <code>id="idnamn"</code>.
+		</p>
+		<p>
+			En barn-selektor är ifall du skulle vilja att t.ex. alla paragrafer som är direkt innanför en <code>&ltfooter&gt</code>-tag skulle stylas på ett speciellt sätt. Detta skulle då anges på detta sätt i CSS-dokumentet: <code>footer &gt p{}</code>. Det som anges innanför deklarations-blocket skulle då gälla för alla paragrafer i footer-taggen. Om man vill komma åt alla barn i <code>&ltfooter&gt</code>-taggen kan man använda <code>*</code>, alltså: <code>footer &gt *{}</code>. Detta skiljer sig från <code>footer p{}</code> eftersom detta skulle påverka alla barn och barnbarn osv ner i ledet.
+		</p>
+		<h2>Enheter</h2>
+		<p>
+
+		</p>
+		<h2>Hur ett CSS-dokument är uppbyggt</h2>
+		<p>
+
+		</p>
 	</body>
 <html>
+<!-- Läst till s.81 Tutorial -->
