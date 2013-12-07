@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>2.2 Text och listor</title>
+	</head>
+	<body>
+		<h1>Text och Listor</h1>
+		<h2>Fontfamilj</h2>
+		<h3>Serif</h3>
+		<p>
+			Serif fonter är bäst för långa texter. Det tros att serifs små fötter leder ögat från bokstav till bokstav, vilket gör att texten blir mer lättläst. Exempel på Serif-fonts är: Times, Times New Roman och Georgia.
+		</p>
+		<h3>Sans-serif</h3>
+		<p>
+			Sand-serif fonter används oftast för rubriker tack vare deras rena utseende. Exempel är: Arial, Helvetica och Verdana.
+		</p>
+		<h3>Monospace</h3>
+		<p>
+			Monospace används ofta för att visa dator-kod. Varje bokstav i monospace fonter är samma bredd. Exempel är: Courier New, Courier och Monaco.
+		</p>
+		<h2>Enheter</h2>
+		<p>
+			För att ange storleken på en font använder man font-size. Man kan antingen ange storleken i en av de olika storleksenheterna som finns i css eller ange nyckelord.
+			Nyckelorden är xx-small, x-small, small, medium, large, x-large och xx-large.
+			Nyckelordet medium är webläsarens grundstorlek för fonten. Här kommer standardvärdena på nyckelorden och hur de renderas.
+			<table>
+				<tr><th>Nyckelord</th><th>Storlek</th><th>Rendering</th></tr>
+				<tr><td>xx-small</td><td>9 pixlar</td><td><p style="font-size:xx-small;" >Här är en mening</p></td></tr>
+				<tr><td>x-small</td><td>10 pixlar</td><td><p style="font-size:x-small;" >Här är en mening</p></td></tr>
+				<tr><td>small</td><td>13 pixlar</td><td><p style="font-size:small;" >Här är en mening</p></td></tr>
+				<tr><td>medium</td><td>16 pixlar</td><td><p style="font-size:medium;" >Här är en mening</p></td></tr>
+				<tr><td>large</td><td>18 pixlar</td><td><p style="font-size:large;" >Här är en mening</p></td></tr>
+				<tr><td>x-large</td><td>24 pixlar</td><td><p style="font-size:x-large;" >Här är en mening</p></td></tr>
+				<tr><td>xx-large</td><td>32 pixlar</td><td><p style="font-size:xx-large;" >Här är en mening</p></td></tr>
+			</table>
+		</p>
+		<p>
+			En av de olika storleksenheterna är procent och precis som nyckelorden är den beroende av webläsarens inställda standardvärde på fonten. Skillnaden är att med procent har man många fler än 7 storlekar att välja mellan. Man anger alltså antal procent av webbläsarens standardstorlek. Font-size är en egenskap som ärvs ner till sina barn, med det menas att taggar som har en font-size specifierat ärver ner det värdet. Alltså kan 100% bero på storleken som ärvs från en annan tagg.
+			<table>
+				<tr><th>Storlek</th><th>Rendering</th></tr>
+				<tr><td>50%</td><td><p style="font-size:50%;" >Här är en mening</p></td></tr>
+				<tr><td>75%</td><td><p style="font-size:75%;" >Här är en mening</p></td></tr>
+				<tr><td>100%</td><td><p style="font-size:100%;" >Här är en mening</p></td></tr>
+				<tr><td>125%</td><td><p style="font-size:125%;" >Här är en mening</p></td></tr>
+				<tr><td>150%</td><td><p style="font-size:150%;" >Här är en mening</p></td></tr>
+				<tr><td>200%</td><td><p style="font-size:200%;" >Här är en mening</p></td></tr>
+			</table>
+		</p>
+		<p>
+			Em är en annan storleksenhet som fungerar precis som procent. 1em = 100%, .75em = 75%, 3em = 300% osv. Arv hos em fungerar likadant som hos procent.
+		</p>
+		<h2>Färg</h2>
+		<p>
+			Man kan ange färgen på texten med attributet color. För att ange vilken färg man vill använda finns ett par olika sätt att göra det på. Ett sätt är hexadecimalt, då anger man en färgs värde med en hashtag följt av det hexadecimala talet som representerar färgen. Exempel. svart = #000000, vit = #ffffff, röd = #ff0000. Det hexadecimala talet representerar hur mycket röd, grön och blå man vill ha i färgen. Man kan även ange samma värde via decimaltal, det gör man såhär: grön = rgb(0,255,0). Man kan aven använda procent: blå = rgb(0,0,100%). Vill man ha genomskinlig text anänder man rgba, där a är alfa(genomskinligheten): rgba(50%, 25%, 100%, .5). Alfa anges med ett tal mellan 0-1.
+		</p>
+		<h2>Teckensnitt</h2>
+		<ul>
+			<li>font</li>
+			<li>font-family - För att ange en font på en sida använder man attributet <code>font-family:</code> följt av den font man vill använda. Man brukar ofta välja att ange flera olika fonter ifall den man egentligen vill använda inte finns på sidan. Det görs såhär: <code>font-family: Arial, Helvetica, sans-serif;</code></li>
+			<li>font-stretch</li>
+			<li>font-size - Med detta attribut anger man vilken storlek man vill ha på fonten.</li>
+			<li>font-size-adjust</li>
+			<li>font-style - Här anger man om man vill att fonten ska renderas i bold eller italic. Värden man kan ange är: bold, italic och oblique.</li>
+			<li>font-variant - Specificerar vilket fontface fonten man valt har. Värden man kan välja är: normal, small-caps och inherit.</li>
+			<li>font-weight</li>
+		</ul>
+		<h2>Text</h2>
+		<p>
+
+		</p>
+		<h2>Stycken</h2>
+		<p>
+
+		</p>
+		<h2>Listor</h2>
+		<p>
+
+		</p>
+	</body>
+<html>
+<!-- s.137 Using the @font-face Directive -->

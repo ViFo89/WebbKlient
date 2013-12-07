@@ -16,9 +16,50 @@
 			Det finns både externt och internt style sheets. Den interna är när man har ett dokuments style i dokumentet, t.ex. när man skriver CSS i <code>&ltstyle&gt</code>-taggen direkt i HTML-dokumentet. Sen finns det externt länkat style sheet. Då skriver man CSS i ett separat style sheet-dokument som man sedan anger i HTML-dokumentet. Det externa sättat är ofta att föredra. Tänkt dig att du har en grön hemsida, men du kommer på att du istället vill att den ska vara blå! Om du använder dig av intern CSS måste du gå till varje HTML-dokument och ändra från grön till blå, det kan både vara tidskrävande och det kan vara lätt att missa vissa hemsidor. Om du istället har ett externt CSS-dokument som alla HTML-sidor använder sig av behöver du bara ändra den gröna färgen till blå på ett ställe och ändringen kommer ske på alla HTML-sidor. Ett externt style sheet-dokument ser även till att dokumentstorleken går ner för HTML-dokumenten eftersom man flyttar ut kod från massor av dokument och lagrar den i ett eget dokument. Detta kan kallas för <abbr>DRY<abbr>-kod (Don't repeat yourself). Ett externt style sheet får även hemsidor att ladda snabbare eftersom webläsaren sparar style sheetet i chachen.
 		</p>
 		<h2>Arv</h2>
-		<p></p>
+		<p>
+			Arv är att en tagg får samma egenskaper som den tagg som omger den. Detta gäller inte bara taggar som är direkt innanför taggen, utan alla taggar som är innanför "grund-taggen". Ex. Om man lägger till en style på <code>&ltbody&gt</code>-taggen kommer alla taggar som är innanför taggen att få samma style. Om man alltså ändrar font-family i <code>&ltbody&gt</code> kommer all text som omsluts av <code>&ltbody&gt</code> få samma font om inte annat anges. Detta gäller inte bara för tagg-stilar utan även för id- och klass-taggar. Dock finns det begränsningar för arv, alla styles man anger ärvs inte till barnen. Exempel på det är <code>border</code> och placerings-attribut.
+		</p>
 		<h2>Cascade</h2>
-		<p></p>
+		<p>
+			Cascade är regler för hur stilar appliceras på HTML-elementen. Problem skulle uppstå t.ex. om man genom arv angav flera stilar på ett element. Det finns då regler som anger vilken stil som ska användas.
+			<ul>
+				<li>
+					<p>
+						<strong>Regel 1.</strong> Närmaste förfader vinner - Om två eller flera av en taggs förfädrer har stylat samma attribut är det den förfader som är närmast som vinner. Ex. <code>&ltbody&gt&ltp&gt&ltstrong&gtHej&lt/strong&gt&lt/p&gt&lt/body&gt</code>, i detta exempel skulle <em>Hej</em> i första hand stylas från strong, sedan p och sist från body.
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong>Regel 2.</strong> Det finns en regel som beräknar hur sannorlikt det är att man menar ett specifikt element. Det fungerar så att olika selektorer ger poäng och den stilen med mest poäng är den som vinner.
+						<ul>
+							<li>Tag-Selektor - 1 poäng</li>
+							<li>Klass-Selektor - 10 poäng</li>
+							<li>ID-Selektor - 100 poäng</li>
+							<li>Inline - 1000 poäng</li>
+						</ul>
+						Exemple:
+						<table>
+							<tr><th>Selektor</th><th>Värde</th><th>Noggrannhet</th></tr>
+							<tr><td>*</td><td>a=0 b=0 c=0</td><td>0</td></tr>
+							<tr><td>LI</td><td>a=0 b=0 c=1</td><td>  1</td></tr>
+							<tr><td>UL LI</td><td>a=0 b=0 c=2</td><td>  2</td></tr>
+							<tr><td>UL OL+LI</td><td>a=0 b=0 c=3</td><td>  3</td></tr>
+							<tr><td>H1 + *[REL=up]</td><td>a=0 b=1 c=1</td><td> 11</td></tr>
+							<tr><td>UL OL LI.red</td><td>a=0 b=1 c=3</td><td> 13</td></tr>
+							<tr><td>LI.red.level</td><td>a=0 b=2 c=1</td><td> 21</td></tr>
+							<tr><td>#x34y</td><td>a=1 b=0 c=0</td><td>100</td></tr>
+							<tr><td>#s12:not(FOO)</td><td>a=1 b=0 c=1</td><td>101</td></tr>
+						</table>
+						Det detta system menar är att om man ger ett element ett ID med tillhörande css-stil så är chansen större att att man vill styla elementet efter ID-stilen än tagg-stilen.
+					</p>					
+				</li>
+				<li>
+					<p>
+						<strong>Regel 3.</strong> Om det skulle bli oavgjort i regel 1 och 2 så är det den sista stilen som skrivits ner som vinner.
+					</p>
+				</li>
+			</ul>
+		</p>
 		<h2>Selektorer</h2>
 		<p>
 			En selektor är den del som bestämmer vilket HTML-element som ska påverkas av stylingen. I figur 1 ser vi att det står <cite>p</cite>. Det betyder att allt som står innanför måsvingarna ska gälla på <code>&ltp&gt</code>-taggar. Alltså en tagg-selektor
@@ -34,12 +75,19 @@
 		</p>
 		<h2>Enheter</h2>
 		<p>
-
+			<strong>Absoluta enheter</strong> är in(inch), cm(centimeter), mm(millimeter), pt(point) och pc(pica). Dessa enheter Sätter ett värde som renderas likadant på alla enheter. Det spelar ingen roll om du går in på sidan via din telefon eller något annat, en text som är 1cm kommer visas likadant.
 		</p>
-		<h2>Hur ett CSS-dokument är uppbyggt</h2>
 		<p>
-
+			<strong>Relativa enheter</strong> är em, ex, px(pixlar) och %(procent). Dessa enheter är beroende av hur andra saker är och renderas där efter. em och ex är beroende av den font som används just nu. <strong>em</strong> är helt enkelt font-storleken. Om en font är 2in stor kommer 1em vara 2in. <strong>ex</strong> är beroende av en fonts x-höjd. <strong>px</strong> definieras så att 1px är det minsta som kan visas på en skärm. En border med 1px brädd är alltså det smalaste den kan vara, smalare än så och skärmen kommer inte kunna rendera den.
 		</p>
+		<h2>Hur ett CSS-dokument är uppbyggt</h2> 
+		<p>
+			Ett CSS-dokument är uppbyggt på detta vis: Först anger man en selektor, det kan vara en tagg-selektor, klass-selektor osv. Efter det startar man deklarationsblocket, där anger man olika stil-ändringar som ska gälla för selektorn. Se figur 1 för en beskrivning av detta.
+		</p>
+		<h2>Andra uppgifter</h2>
+		<ul style="list-style-type: none">
+			<li><a href="TextochListor.html">2.2 Text och listor</a></li>
+		</ul>
 	</body>
 <html>
-<!-- Läst till s.81 Tutorial -->
+<!-- Läst till s.127 Formatting Text -->
