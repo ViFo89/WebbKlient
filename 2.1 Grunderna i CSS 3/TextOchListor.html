@@ -3,6 +3,12 @@
 	<head>
 		<meta charset="utf8">
 		<title>2.2 Text och listor</title>
+		<style>
+			#firstletter:first-letter{
+				font-size:200%;
+				color:#8A2BE2;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>Text och Listor</h1>
@@ -56,27 +62,81 @@
 		</p>
 		<h2>Teckensnitt</h2>
 		<ul>
-			<li>font</li>
+			<li>font - Detta är ett sätt att ange en fonts värden på en rad. Med detta kan man alltså ersätta font-style, font-variant, font-weight, font-size, lineheight, and font-family. Skrivs såhär: <code>font: italic bold small-caps 18px/150% Arial, Helvetica, sans-serif;</code> Alltså mellanslag mellan de olika värdena och komma mellan font-family värdena. Man måste ange font size och font family, allt annat är valbart.</li>
 			<li>font-family - För att ange en font på en sida använder man attributet <code>font-family:</code> följt av den font man vill använda. Man brukar ofta välja att ange flera olika fonter ifall den man egentligen vill använda inte finns på sidan. Det görs såhär: <code>font-family: Arial, Helvetica, sans-serif;</code></li>
-			<li>font-stretch</li>
+			<li>font-stretch - Detta tillåter att ange hur bred eller smal man vill att texten ska vara. De olika värdena man kan ange är: wider, narrower, ultra-condensed, extra-condensed, semi-condensed, normal, semi-expanded, expanded, extra-expanded, ultra-expanded och inherit. Det finns inga webläsare än som stödjer denna tagg. </li>
 			<li>font-size - Med detta attribut anger man vilken storlek man vill ha på fonten.</li>
-			<li>font-size-adjust</li>
+			<li>font-size-adjust - Ifall den första fonten man önskat inte kan visas så kan det bli en skillnad när då istället andrahandsfonten ska visas som exempelvis är större än förstahandsfonten. Detta går att justera med font-size-adjust. </li>
 			<li>font-style - Här anger man om man vill att fonten ska renderas i bold eller italic. Värden man kan ange är: bold, italic och oblique.</li>
 			<li>font-variant - Specificerar vilket fontface fonten man valt har. Värden man kan välja är: normal, small-caps och inherit.</li>
-			<li>font-weight</li>
+			<li>font-weight - Detta anger om man vill göra texten fet eller inte. Anges såhär: font-weight: bold; Här är rendering på olika alternativ.
+			<table>
+				<tr><th>Nyckelord</th><th>Rendering</th></tr>
+				<tr><td>100</td><td><p style="font-weight: 100;" >Här är en mening</p></td></tr>
+				<tr><td>200</td><td><p style="font-weight: 200;" >Här är en mening</p></td></tr>
+				<tr><td>300</td><td><p style="font-weight:300;" >Här är en mening</p></td></tr>
+				<tr><td>400</td><td><p style="font-weight:400;" >Här är en mening</p></td></tr>
+				<tr><td>500</td><td><p style="font-weight:500;" >Här är en mening</p></td></tr>
+				<tr><td>600</td><td><p style="font-weight:600;" >Här är en mening</p></td></tr>
+				<tr><td>700</td><td><p style="font-weight:700;" >Här är en mening</p></td></tr>
+				<tr><td>800</td><td><p style="font-weight:800;" >Här är en mening</p></td></tr>
+				<tr><td>900</td><td><p style="font-weight:900;" >Här är en mening</p></td></tr>
+				<tr><td>bold</td><td><p style="font-weight:bold;" >Här är en mening</p></td></tr>
+				<tr><td>bolder</td><td><p style="font-weight:bolder;" >Här är en mening</p></td></tr>
+				<tr><td>lighter</td><td><p style="font-weight:lighter;" >Här är en mening</p></td></tr>
+				<tr><td>normal</td><td><p style="font-weight:normal;" >Här är en mening</p></td></tr>
+			</table>
+			Beroende på vad du har för font på din webläsare kanske inte ändringarna visas men 400 är samma som normal och 700 är samma som bold. Man kan även ange inherit och då ärver den sin fethet.
+			</li>
 		</ul>
 		<h2>Text</h2>
-		<p>
-
-		</p>
+		<ul>
+			<li>letter-spacing - Här kan man ange mellanrummet mellan bokstäverna i ord. Man kan ge både positiva och negativa värden. Normalt: Här är en mening, Positivt värde: <span style="letter-spacing: 1.5px;">Här är en mening</span>, Negativt värde: <span style="letter-spacing: -1.5px;">Här är en mening</span>.</li>
+			<li>word-spacing - Med denna anger du hur långt ett mellanslag ska vara. Normalt: Här är en mening, Positivt värde: <span style="word-spacing: 2px;">Här är en mening</span>, Negativt värde: <span style="word-spacing: -2px;">Här är en mening</span>.</li>
+			<li>line-height - Anger radavståndet. Man anger antingen i em, px, procent eller genom att bara skriva ett nummer. Webläsaren muliplicerar då bara standardvärdet med numret. Exempel:
+				<br>line-height: 70%:
+				<p style=" line-height:70%;">
+				This is a paragraph with a smaller line-height.<br>
+				This is a paragraph with a smaller line-height.<br>
+				This is a paragraph with a smaller line-height.<br>
+				</p>
+				line-height: 200%:
+				<p style=" line-height:200%;">
+				This is a paragraph with a bigger line-height.<br>
+				This is a paragraph with a bigger line-height.<br>
+				This is a paragraph with a bigger line-height.<br>
+				</p></li>
+			<li>text-align - Används för att placera text på hemsidan. Värdena som kan anges är left, right, justify och center. Exempel: </li>
+			<p style="text-align: right;">Här är en mening</p>
+			<p style="text-align: center;">Här är en mening</p>
+			<p style="text-align: left;">Här är en mening</p>
+			<li>text-decoration - används för att dekorera text med understruket, överstruket eller ett stäck ovanför den valda delen. Värdena som kan anges är: overline, line-through och underline. Dessa går att kombinera. Renderas: <span style="text-decoration:overline line-through underline;">Här är en mening</span> </li>
+			<li>text-shadow - används för att lägga till skugga på text. Anges såhär: <code>text-shadow: -4px 4px 3px #999999</code> Rednderas: <span style="text-shadow:-4px 4px 3px #999999;">Här är en mening</span>. Första värdet är vart skuggan ska placeras horisontellt, eftersom det i det här fallet är negativt placeras det 4px till vänster. andra värdet är det vertikala värdet, negativt är upp positivt är ner. Tredje värdet är hur suddig skuggan ska vara. Hexadecimala värdet är färgen på skuggan.</li>
+			<li>text-indent - Skapar en indentering på första raden i en mening (som i endel böcker).</li>
+			<li>text-transform - Man kan ange uppercase, lowercase eller capitalize. Uppercase gör alla boksätver stora, lowercase gör alla bokstäver små och capitalize gör första bokstaven stor.</li>
+			<li>white-space - Här specifierar man hur white-space ska hanteras i ett element. Om man skulle ange ett två ord med två mellanslag mella sig kommer webläsaren rendera det som ett mellanslag, detta kan ändras med <code>pre</code> värdet. Om en rad inte passar på en sida kommer webläsaren automatiskt att dela upp raden i flera rader, detta kan också ändras m.h.a <code>no-wrap</code> värdet.</li>
+		</ul>
 		<h2>Stycken</h2>
-		<p>
-
-		</p>
+		<ul>
+			<li>p:first-line - Detta är en selektor för att kunna lägga till stil på den första raden av ett element.</li>
+			<li>p:first-letter - Detta är en selektor för att kunna lägga till stil på den första bokstaven av ett element. Ex: <p id="firstletter">Här är en mening.</p>Här valdes 'H' av selektorn :first-letter.</li>
+		</ul>
 		<h2>Listor</h2>
-		<p>
+		<ul>
+			<li>list-style - Används som en forkortning av de tre attribut som kommer under. Man skriver såhär: <code>list-style: disc url(images/bullet.gif) inside;</code>. Se neranför för beskrivning av de olika värdena.</li>
+			<li>list-style-image - Denna använder man om man vill lägga till egna bilder som listdekoration.</li>
+			<li>list-style-position - Om man vill att listdekorationen ska renderas innanför eller utanför "content flow". Exempel:
+				<ul style="list-style-position: inside;">
+					<li>inside</li>
+				</ul>
 
-		</p>
+				<ul style="list-style-position: outside;">
+					<li>outside</li>
+				</ul>
+			</li>
+			<li>list-style-type -  Om man vill ändra listfigur. T.ex. om man vill ändra punkterna i en oordnad lista till fyrkanter eller om man vill ändra siffrorna i en ordnad lista till t.ex. romserska siffror. Man kan även skriva none om man vill göra en odekorerad lista.</li>
+		</ul>
 	</body>
 <html>
 <!-- s.137 Using the @font-face Directive -->
+<!-- 163 -->
