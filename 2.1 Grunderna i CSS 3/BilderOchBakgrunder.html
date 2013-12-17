@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>2.4 Bilder och bakgrunder</title>
+		<link rel="stylesheet" href="styles/style4.css">
+	</head>
+	<body>
+		<h1>Bilder och bakgrunder</h1>
+		<p>När man använder bilder på sin hemsida är det inte så vanligt att man stylar img-taggen. Istället är det att föredra att man stylar klasser som man sedan tilldelar de bilder som de berör. Ett annat sätt att styla bilder på är att man skapar en <code>&ltdiv&gt</code> som är av en specifik klass eller id, och sedan stylar man alla bilder som kommer ligga i den div'en.</p>
+		
+		<h3>background</h3>
+		<p>
+			<code>background</code> är ett samlingsattribut för olika bakgrundsattribut. Man kan ange vilken bild som ska användas, vart den ska placeras, repetitionen av bilden, om den ska vara fixerad eller ej och bakgrundsfärg.
+			Koden ser ut såhär: <code>background: url(img.png) center center no-repeat fixed #fff;</code> Alla värden behövs inte anges, utan man kan själv ange bara dom man vill.
+		</p>
+		<h3>background-attachment</h3>
+		<p>
+			När man scrollar nedåt på en sida kommer information som ligger ovanför självklart försvinna utanför skärmen. Det kan ställa in med background-attachemnt. Det kan vara användbart om man t.ex. har en logga som man alltid vill ska synas Värdena som kan anges är scroll och fixed. Scroll är det normala värdet som är förinställt och fixed kommer se till att bilden har samma position även när man scrollar. <a href="baEx.html">Här</a> finns ett exempel. Loggan följer med på sidan medans man scrollar nedåt.
+		</p>
+		<h3>background-color</h3>
+		<p>
+			background-color används helt enkelt för att byta färg på bakgrunden. <code>background-color: green;</code> genererar:
+			<div id="bcEx1"></div>
+			Man kan ange både keywords, hexadecimala värden, rgb() och rgba().
+		</p>
+		<h3>background-image</h3>
+		<p>
+			Lägger till en bild som bakgrund på hemsidan. Skrivs oftast i <code>body</code>. Taggen ser ut såhär: <code>background-image: url(image.gif)</code>. Här kommer en div som har en bakgrundsbild: <div id="bgEx1"></div>
+		</p>
+		<h3>background-position</h3>
+		<p>
+			För att kontrollera vart bakgrundsbilden ska hamna används <code>background-position</code>. Det finns olika sätt att ge detta attribut värde. Nyckelorden man kan använda är center, right, left, bottom, top. Man skriver ett nyckelord för hur bilden ska hamna horisontellt och ett för hur den ska hamna vertikalt. För den horisontella axeln gäller: left, center och right, för den vertikala axeln gäller top, center och bottom.
+		</p>
+		<div id="posEx1"><strong><code>background-position: center center;</code></strong></div>
+		<div id="posEx2"><strong><code>background-position: bottom right;</code></strong></div>
+		<div id="posEx3"><strong><code>background-position: center top;</code></strong></div>
+		<p>
+			Man kan även använda exakta värden när man ska placera bilden. Man använder två värden, en för avståndet mellan bildens vänsterkant och behållarens vänsterkant, och en för att ange avståndet mellan bildens överkant och behållarens överkant. Koden ser ut såhär: <code>background-position: 5px 5px;</code>
+		</p>
+		<p>
+			Man kan använda procent för att placera en bakgrundsbild proportionerligt på hemsidan. <code>background-position: 0% 0%;</code> kommer placera bilden i det övre högra hörnet, <code>background-position: 50% 50%;</code> placerar den i mitten av hemsidan osv.
+		</p>
+		<h3>background-repeat</h3>
+		<p>
+			För att kontrollera repetitionen av bakgrundsbilder använder man <code>background-repeat</code>. Man kan med hjälp av repetition fylla en hel sidas bakgrund med en enda bild. De 4 nyckelorden som kan anges är: repeat, no-repeat, repeat-x och repeat-y. <strong>Repeat</strong> är det värde som är förinställt och kommer upprepa bilden både horisontellt och vertikalt. <strong>Repeat-x</strong> kommer upprepa bilden horisontellt. <strong>Repeat-y</strong> kommer upprepa bilden vertikalt. <strong>No-repeat</strong> kommer inte att upprepa bilden.
+		</p>
+		<h3>Float</h3>
+		<p>
+			Ett html-dokument flyter vanligtvis från topp till botten, ett block-element efter ett annat. Med float kan man delvist ändra detta. Float tar nyckelorden left, right och none som värden. Float gör att text flyter och omger objektet istället för att dela upp sig i uppenbara block. Här är en bild som visar detta:<img src="web-text-wrap.png"> För att få ett element att inte påverkas av float använder man clear. Clear kan ta värdena left, right, both och none.
+		</p>
+		
+		<div id="floatEx">
+			<img src="tardigrade_eyeofscience_1024.jpg">
+			<img src="tardigrade_eyeofscience_1024.jpg">
+			<img src="tardigrade_eyeofscience_1024.jpg">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+			</p>
+			<h1>Rubrik</h1>
+		</div>
+		<p>Denna text flyter runt bilderna. Bilderna har<code> float: right;</code> och <code>clear: right;</code>. Utan clear hade dom hamnat bredvid varandra och inte under varandra. Rubriken har <code>clear:both;</code>, utan den hade den hamnat på sidan av den sista bilden och inte på en ny rad som i det här fallet.</p>
+		<a href="index.html">Tillbaka</a>
+	</body>
+<html>

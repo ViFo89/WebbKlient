@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>2.3 Marginaler, Kantlinjer och Padding</title>
+		<link rel="stylesheet" href="styles/style3.css">
+	</head>
+	<body>
+		<h1>Marginaler, Kantlinjer och Padding</h1>
+		<img src="box-model.gif">
+		<p>
+			Varje html-element innehåller egenskaper som beskriver hur din webläsare ska rendera dem. Webläsaren ser alla html-element som små lådor och i lådorna finns texten, bilderna eller vad det nu är för sorts tag. I bilden ovanför så skulle själva innehållet vara content. Padding är utrymmet mellan t.ex. bilden och "ramen". Border är linjen som ritas runt paddingen och man kan välja att rita eller inte rita bordern på en sida. När man anger <code>background-color</code> fylls content, border och padding. Slutligen är margin som är det utrymme som separerar ett element från ett annat.  
+		</p>
+		<div class="fifty" id="boxExample">
+			<p id="boxExample">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<p>
+			Här har vi ett exempel på "the box-model". Det är en paragraf i en div där avståndet mellan texten och det gröna strecket är paddingen. Det gröna sträcket är bordern. Den bruna delen är margin.
+		</p>
+		<h2>Marginaler</h2>
+		<ul>
+			<li><strong>margin</strong> - Här anger man marginalen för ett element. Man kan ange marginalen på dessa sätt:
+				<ul>
+					<li>
+						<code>margin: 25px 50px 75px 100px;</code>
+						<ul>
+							<li>topp-marginalen blir 25px</li>
+							<li>höger-marginalen blir 50px</li>
+							<li>botten-marginalen blir 75px</li>
+							<li>vänster-marginalen blir 100px</li>
+						</ul>
+					</li>					
+					<li>
+						<code>margin: 25px 50px 75px;</code>
+						<ul>
+							<li>topp-marginalen blir 25px</li>
+							<li>höger- och vänster-marginalen blir 50px</li>
+							<li>botten-marginalen blir 75px</li>
+						</ul>
+					</li>					
+					<li>
+						<code>margin: 25px 50px;</code>
+						<ul>
+							<li>topp- och botten-marginalen blir 25px</li>
+							<li>höger- och vänster-marginalen blir 50px</li>
+						</ul>
+					</li>					
+					<li>
+						<code>margin: 25px;</code>
+						<ul>
+							<li>Alla sidor blir 25px</li>
+						</ul>
+					</li>
+
+
+				</ul>
+			</li>
+			<li><strong>margin-top</strong> - Anger specifikt toppen-marginalen.</li>
+			<li><strong>margin-right</strong> - Anger specifikt höger-marginalen.</li>
+			<li><strong>margin-bottom</strong> - Anger specifikt botten-marginalen.</li>
+			<li><strong>margin-left</strong> - Anger specifikt vänster-marginalen.</li>
+		</ul>
+		<h2>Kantlinjer</h2>
+		<ul>
+			<li><strong>border</strong> - Här anger man ramens värden. Anges såhär: <code>border: 5px solid red;</code>. Första värdet är tjockleken på ramen, andra värdet är vilken typ den ska va och tredje vardet är vilken färg den ska vara. Denna kod skulle renderas såhär:
+				<div class="fifty" id="kantlinjerEx1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+			</li>
+			<li><strong>border-top</strong> - Den här kan man använda om man vill specifisera endast toppen på ramen. <code>border-top: 10px double #00FF00;</code> skulle renderas såhär:
+				<div class="fifty" id="kantlinjerEx2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+			</li>
+			<li><strong>border-right</strong> - Används på samma sätt som <code>border-top</code> men andrar endast högerdelen av ramen.</li>
+			<li><strong>border-bottom</strong> - Används på samma sätt som <code>border-top</code> men andrar endast bottendelen av ramen.</li>
+			<li><strong>border-left</strong> - Används på samma sätt som <code>border-top</code> men andrar endast vänsterdelen av ramen.</li>
+			<li><strong>border-top-color</strong> - Används för att specifiera färgen på överdelen av ramen. Man kan antingen ange hexadecimal-värdet av färgen eller nyckelordet(ex. red, green, brown etc).</li>
+			<li><strong>border-right-color</strong> - Används för att specifiera färgen på högerdelen av ramen.</li>
+			<li><strong>border-bottom-color</strong> - Används för att specifiera färgen på underdelen av ramen.</li>
+			<li><strong>border-left-color</strong> - Används för att specifiera färgen på vänsterdelen av ramen.</li>
+			<li><strong>border-style</strong> - Används för att ange stilen på ramen. Stilar som finns är hidden, dotted, dashed, solid, double, groove, ridge, inset, outset och none.</li>
+			<li><strong>border-top-style</strong> - Används för att ange stilen på överdelen av ramen.</li>
+			<li><strong>border-right-style</strong> - Används för att ange stilen på högerdelen  ramen.</li>
+			<li><strong>border-bottom-style</strong> - Används för att ange stilen på undersidan av ramen.</li>
+			<li><strong>border-left-style</strong> - Används för att ange stilen på vänsterdelen av ramen.</li>
+			<li><strong>border-width</strong> - Används för att ange tjockleken på ramen. Man kan ange tjockleken med numeriskt värde eller nyckelord. Nyckelorden som finns är thin, medium och thick. Man kan ange olika tjocklekar på de olika sidorna:
+				<ul>
+					<li><code>border-width:thin medium thick 10px;</code>
+						<ul>
+							<li>Toppen-sidan blir "thin".</li>
+							<li>Höger-sidan blir "medium".</li>
+							<li>Botten-sidan blir "thick".</li>
+							<li>Vänster-sidan blir 10px.</li>
+						</ul>
+					</li>
+					<li><code>border-width:thin medium "thick";</code>
+						<ul>
+							<li>Toppen-sidan blir "thin".</li>
+							<li>Höger- och vänster-sidan blir "medium".</li>
+							<li>Botten-sidan blir "thick".</li>
+						</ul>
+					</li>
+					<li><code>border-width:thin medium;</code>
+						<ul>
+							<li>Toppen- och botten-sidorna blir "thin".</li>
+							<li>Höger- och vänster-sidorna blir "medium".</li>
+						</ul>
+					</li>
+					<li><code>border-width:thin;</code>
+						<ul>
+							<li>Alla sidor blir "thin".</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><strong>border-top-width</strong> - Används för att specifiera enbart bredden på toppen av ramen.</li>
+			<li><strong>border-right-width</strong> - Används för att specifiera enbart bredden på höger-sidan av ramen.</li>
+			<li><strong>border-bottom-width</strong> - Används för att specifiera enbart bredden på botten av ramen.</li>
+			<li><strong>border-left-width</strong> - Används för att specifiera enbart bredden på vänster-sidan av ramen.</li>
+		</ul>
+		<h2>Paddning</h2>
+		<ul>
+			<li><strong>padding</strong> - Denna fungerar likadant som margin fast med padding istället. Alltså läggs det till utrymme mellan ramen och innehållet. Man kan även skriva padding på samma sätt som margin, alltså: <code>padding:4px 3px 2px 0;</code> och det fungerar på samma sidor som beskrivet i margin.</li>
+			<li><strong>padding-top</strong> - Används för att lägga till padding på överdelen av ett element.</li>
+			<li><strong>padding-right</strong> - Används för att lägga till padding på högersidan av ett element.</li>
+			<li><strong>padding-bottom</strong> - Används för att lägga till padding på undersidan av ett element.</li>
+			<li><strong>padding-left</strong> - Används för att lägga till padding på vänstersidan av ett element.</li>
+		</ul>
+		<h2>Outlines</h2>
+			<ul>
+				<li><strong>outline</strong> - Fungerar som border men tar ingen plats. Med det menas att ingen höjd eller brädd läggs till på elementet. En annan skillnad är att man inte kan välja vilka sidor som ska ha outline, alla sidor får det. Här är två exempel som har exakt samma kod forutom att den första div'en har border och den andra har outline.
+					<div id="OutlinesEx1">
+						<code>padding:5px;margin5px;border:5px solid black;</code>
+					</div>
+					<div id="OutlinesEx2">
+						<code>padding:5px;margin5px;outline:5px solid black;</code>
+					</div>
+					<br>
+					Det som händer här är att outline-boxen renderas som 10px kortare än border-boxen eftersom 5px från höger och vänster sida inte räknas med.
+				</li>
+				<li><strong>outline-color</strong> - Används för att ange färgen på outline.</li>
+				<li><strong>outline-style</strong> - Används för att ange stilen på outline. Här kan de samma stilar som border användas.</li>
+				<li><strong>outline-width</strong> - Används för att ange tjockleken på outline.</li>
+			</ul> 
+		<h2>Synlighet</h2>
+		<ul>
+			<li><strong>visibility</strong> - Används för att dölja element på en hemsida. Värdena som kan ges är <code>hidden</code> och <code>visible</code>. Det finns även <code>collapse</code> som endast används på tabeller (fungerar bara i IE och Firefox). När man döljer ett element med <code>visivility: hidden;</code> ligger fortfarande elementet kvar på sidan, det blir alltså bara en tom del där elementet egentligen skulle vara.</li>
+			<li><strong>clip</strong> - Används för att skapa en rektangel för att visa bara en del av ett element. Koden ser ut såhär: <code>clip: rect(5px, 100px, 40px, 10px);</code>. Det första måttet är topp offset, det andra måttet är bredden på rektangeln, tredje måttet är höjden och det sista måttet är vänster offset. Alltså kommer elementet med den här koden bara visas från 5px från toppen, 10px från vänster och allt om är 100px till höger på bilden kommer att döljas och allt som kommer 40px ner kommer att döljas. Fungerar endast på absoluta plaserade element.
+			<li><strong>display</strong> - Används för att ändra hur element ska visas. Man kan tillexempel ändra block-level element (som paragrafer) så dom blir inline istället eller så kan man göra tvärtom och ändra så inline element(som länkar) visas som block-level element. Exempel: 
+				<div id="inline"><p>Paragraf Ett</p><p>Paragraf Två</p><p>Paragraf Tre</p></div>
+				<div id="block"><a href="#">Länk Ett</a><a href="#">Länk Två</a><a href="#">Länk Tre</a></div>
+				Här ser vi att paragraferna (som är block-element) visas som inline-element och länkar som är inline-element visas som block-element.</li>
+			<li><strong>overflow</strong> - Används för att specificera vad som ska hända med text som går över sin content-area. Värdena är <code>visible</code>, <code>hidden</code>, <code>scroll</code> och <code>auto</code>. 
+				<div id="overflowEx1"><p>Visible gör att texten fortsätter utanför sin content-area.</p></div>
+				<div id="overflowEx2"><p>Hidden gör att texten försvinner utanför sin content-area.</p></div>
+				<div id="overflowEx3"><p>Scroll gör att man får en scroll.</p></div>
+				<div id="overflowEx4"><p>Auto gör att man får en scroll, men bara om det verkligen krävs för att visa resten av innehållet.</p></div>
+			</li>
+		</ul>
+		<h2>Övrigt</h2>
+		<h3>Hur man gör ett element genomskinligt</h3>
+		<p>
+			För att få ett element att bli delvist eller helt genomskinligt kan man använda <code>opacity</code>. Koden är: <code>opacity: .5;</code> där värdet ska vara ett nummer mellan 0-1. Opacity är bra att använda eftersom den är enkel att animera. Här är några exempel:
+			<div id="opacityEx1">
+				<p>Det här elementet har <code>opacity:1</code></p>
+			</div>
+			<div id="opacityEx2">
+				<p>Det här elementet har <code>opacity:.75</code></p>
+			</div>
+			<div id="opacityEx3">
+				<p>Det här elementet har <code>opacity:.5</code></p>
+			</div>
+			<div id="opacityEx4">
+				<p>Det här elementet har <code>opacity:.25</code></p>
+			</div>
+			<div id="animate">
+				<p>
+					Här har vi ett animerat elemnt. Sätt musen över den här lådan. Går mellan 0-1.
+				</p>
+			</div>
+		</p>
+		<p>
+			Man kan även använda rgba för att få fram genomskinlighet. Om man vill få fram samma resultat som opacity behöver man ange både <code>background-color</code> och <code>color</code>  med det alfa-värde man vill ha.
+			<div id="rgbaEx1">
+				<code>background-color:rgba(255,150,150,.5);color:rgba(0,0,0,1);</code>
+			</div>
+			<div id="rgbaEx2">
+				<code>background-color:rgba(255,150,150,1);color:rgba(0,0,0,0.5);</code>
+			</div>
+			<div id="rgbaEx3">
+				<code>background-color:rgba(255,150,150,.5);color:rgba(0,0,0,.5);</code>
+			</div>
+		</p>
+		<h3>Rundade hörn</h3>
+		<p>
+			För att göra runda hörn på element använder man <code>border-radius</code>. Man kan använda pixlar, procent och ems när man anger värden. Om man anger ett värde(<code>border-radius: 30px</code>) blir alla hörn rundade.
+		</p>
+		<div id="brEx1">Runda hörn</div>
+		<p>
+			Anger man fyra värden kan man själv välja hur runda varje hörn ska vara. <code>border-radius: 20px 0 5px 10px;</code>
+		</p>
+		<div id="brEx2">Runda hörn</div>
+		<p>
+			Anger man två värden påverkar det första värdet topp-vänster och botten-höger, det andra vändet påverkar topp-höger och botten-vänster. <code>border-radius: 15px 2px;</code>
+		</p>
+		<div id="brEx3">Runda hörn</div>
+		<p>
+			Förutom att ange cirkel-hörn kan man även ange elliptiska-hörn. För det behöver man två värden per "värdesplats", såhär: <code>border-radius: 70px/15px;</code>
+		</p>
+		<div id="brEx4">Runda hörn</div>
+		<p>Man kan blanda elliptiska-hörn med cirkel-hörn.</p>
+		<div id="brEx5">Runda hörn</div>
+		<h3>Multippla bakgrundsbilder</h3>
+		<p>
+			För att få multippla bakgrundsbilder lägger man helt enkelt bara till ett komma mellan varje bild när man laddar in dem. Såhär: <code>background-image: url(image1.jpg), url(image2.jpg);</code>. För att sedan ändra deras egenskaper sätter man bara komman emellan värden: <code>background-repeat: no-repeat, repeat-y;</code>. Nu har image1.jpg satts till "no repeat" och image2.jpg har satts till "repeat-y".
+		</p>
+		<div id="bgEx1"></div>
+		<p>Här är koden för exemplet ovanför: <code>background: url(img1.png) left repeat-y, url(img2.png) top right repeat-y;</code></p>
+		<h3>Skuggor</h3>
+		<p>
+			Skuggor används för att få ett element att framstå som om det ligger lite ovanför bakgrunden. Man gör en skugga genom att använda <code>box-shadow: 4px 6px 8px rgba(0,0,0,.75)</code>. Första värdet är horisontella offset, andra värdet är vertikala offset, tredje värdet är skuggradien och det sista värdet är skuggfärgen. Man kan ange negativa värden för att få skuggan att ligga åt andra hållet. Vill man att skuggan ska gå innåt i lådan skriver man inset innan det första värdet. Man kan även lägga till ett fjärde värde (läggs in innan färgen) som anger spridningen. 10px i spridning gör att skuggan ögas med 10px utåt.
+		</p>
+		<div id="bsEx1"><code>box-shadow: 4px 6px 8px rgba(0,0,0,.75);</code></div>
+		<div id="bsEx2"><code>box-shadow: -4px -6px 5px #004500;</code></div>
+		<div id="bsEx3"><code>box-shadow: inset 0px 0px 8px 2px black;</code></div>
+		<div id="bsEx4"><code>box-shadow: 0px 0px 10px 10px blue;</code></div>
+		<h3>Gradienter</h3>
+		<p>
+			Gradienter är när man har en färg och sedan går över i en annan:
+		</p>
+		<div id="grEx1">
+			<code>background-image: linear-gradient(left,black,white);</code>
+		</div>
+		<p>
+			För att det ska fungera på alla webläsare krävs det att man anger ett prefix:
+			<ul>
+			<li><code>background-image: -webkit-linear-gradient(left,black,white);</code></li> 
+			<li><code>background-image: -moz-linear-gradient(left,black,white);</code></li> 
+			<li><code>background-image: -o-linear-gradient(left,black,white);</code></li> 
+			<li><code>background-image: -ms-linear-gradient(left,black,white);</code></li>
+			</ul>
+			Man kan även ange ett gradertal som anger riktningen av färgskiftningen:
+			<div id="grEx2">
+				<code>background-image: linear-gradient(90deg,#FFaaaa,#AA0000);</code>
+			</div>
+			Man kan även använda fler än två färger.
+			<div id="grEx3">
+				<code>background-image: linear-gradient(right,red,green,yellow,orange);</code>
+			</div>
+			Man kan ange vart skiftningarna ska ske. Här anger man att efter 10% ska det skiftas till gul, sedan ska nästa skiftning ske vid 90%.
+			<div id="grEx4">
+				<code>background-image: linear-gradient(left, #900, #FC0 10%, #FC0 90%, #900);</code>
+			</div>
+			För att få färgskiftning som upprepar sig använder man <code>repeating-linear-gradient</code>.
+			<div id="grEx5">
+				<code>background-image: repeating-linear-gradient(bottom left, #900 20px, #900 30px, #900 40px);</code>
+			</div>
+		</p>
+		<a href="index.html">Tillbaka</a>
+	</body><!-- s193 -->
+<html>

@@ -1,0 +1,11 @@
+html
+{
+	background-image: url(logga.gif);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+p 
+{
+	margin-left: 230px;
+	width: 100px;
+}

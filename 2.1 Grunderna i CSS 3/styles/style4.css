@@ -1,0 +1,60 @@
+#bgEx1
+{
+	background-image: url(img1.png);
+	height: 200px;
+	width: 400px;
+}
+#posEx1
+{
+	background-image: url(img2.png);
+	background-repeat: no-repeat;
+	height: 300px;
+	width: 500px;
+	border: 1px solid black;
+	background-position: center center;
+	text-align: center;
+}
+#posEx2
+{
+	background-image: url(img2.png);
+	background-repeat: no-repeat;
+	height: 300px;
+	width: 500px;
+	border: 1px solid black;
+	background-position: bottom right;
+	text-align: center;
+}
+#posEx3
+{
+	background-image: url(img2.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 300px;
+	width: 500px;
+	border: 1px solid black;
+	text-align: center;
+}
+#bcEx1
+{
+	background-color: green;
+	height: 200px;
+	width: 200px;
+}
+#floatEx
+{
+	border: 1px solid black;
+	width: 700px;
+	padding: 20px;
+}
+#floatEx img
+{
+	width: 40%;
+	height: 40%;
+	float: right;
+	clear: right;
+	margin: 20px 20px 5px 5px;
+}
+#floatEx h1
+{
+	clear:both;
+}
