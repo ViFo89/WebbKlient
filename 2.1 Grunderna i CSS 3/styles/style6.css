@@ -1,0 +1,49 @@
+#tableEx1
+{
+	border-collapse: separate;
+	border:1px solid black;
+}
+#tableEx1 td, th
+{
+	border:1px solid black;
+}
+#tableEx2
+{
+	border-collapse: collapse;
+	border:1px solid black;
+}
+#tableEx2 td, th
+{
+	border:1px solid black;
+}
+#tableEx3
+{
+	caption-side: top;
+	border:1px solid black;
+	margin-bottom: 10px;
+}
+#tableEx4
+{
+	caption-side: bottom;
+	border:1px solid black;
+}
+#tableEx5
+{
+	border-collapse: separate;
+	border:1px solid black;
+	empty-cells: hide;
+}
+#tableEx5 td, th
+{
+	border:1px solid black;
+}
+#tableEx6
+{
+	border-collapse: separate;
+	border:1px solid black;
+	empty-cells: show;
+}
+#tableEx6 td, th
+{
+	border:1px solid black;
+}

@@ -1,12 +1,12 @@
 #bgEx1
 {
-	background-image: url(img1.png);
+	background-image: url(../pictures/img1.png);
 	height: 200px;
 	width: 400px;
 }
 #posEx1
 {
-	background-image: url(img2.png);
+	background-image: url(../pictures/img2.png);
 	background-repeat: no-repeat;
 	height: 300px;
 	width: 500px;
@@ -16,7 +16,7 @@
 }
 #posEx2
 {
-	background-image: url(img2.png);
+	background-image: url(../pictures/img2.png);
 	background-repeat: no-repeat;
 	height: 300px;
 	width: 500px;
@@ -26,7 +26,7 @@
 }
 #posEx3
 {
-	background-image: url(img2.png);
+	background-image: url(../pictures/img2.png);
 	background-repeat: no-repeat;
 	background-position: center top;
 	height: 300px;

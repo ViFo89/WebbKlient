@@ -1,0 +1,44 @@
+#firstletter:first-letter
+{
+	font-size:200%;
+	color:#8A2BE2;
+}
+#fontSizeEx1 { font-size:xx-small; }
+#fontSizeEx2 { font-size:x-small; }
+#fontSizeEx3 { font-size:small; } 
+#fontSizeEx4 { font-size:medium; } 
+#fontSizeEx5 { font-size:large; } 
+#fontSizeEx6 { font-size:x-large; } 
+#fontSizeEx7 { font-size:xx-large; }
+#fontSizeEx8 { font-size:50%; } 
+#fontSizeEx9 { font-size:75%; } 
+#fontSizeEx10 { font-size:100%; } 
+#fontSizeEx11 { font-size:125%; } 
+#fontSizeEx12 { font-size:150%; } 
+#fontSizeEx13 { font-size:200%; }
+#fontWeightEx1 { font-weight: 100; }
+#fontWeightEx2 { font-weight: 200; } 
+#fontWeightEx3 { font-weight: 300; } 
+#fontWeightEx4 { font-weight: 400; } 
+#fontWeightEx5 { font-weight: 500; } 
+#fontWeightEx6 { font-weight: 600; }
+#fontWeightEx7 { font-weight: 700; }
+#fontWeightEx8 { font-weight: 800; } 
+#fontWeightEx9 { font-weight: 900; } 
+#fontWeightEx10 { font-weight: bold; } 
+#fontWeightEx11 { font-weight: bolder; } 
+#fontWeightEx12 { font-weight: lighter; }
+#fontWeightEx13 { font-weight: normal; }
+#letterSpacingEx1 { letter-spacing: 1.5px;}
+#letterSpacingEx2 { letter-spacing: -1.5px;}
+#wordSpacingEx1 { word-spacing: 2px;}
+#wordSpacingEx2 { word-spacing: -2px;}
+#lineHeightEx1 { line-height: 70%; }
+#lineHeightEx2 { line-height: 200%; }
+#textAlignEx1 { text-align: right; }
+#textAlignEx2 { text-align: center; }
+#textAlignEx3 { text-align: left; }
+#textDecorationEx { text-decoration:overline line-through underline; }
+#textShadowEx { text-shadow:-4px 4px 3px #000000; }
+#listStylePositionEx1 { list-style-position: inside; }
+#listStylePositionEx2 { list-style-position: outside; }

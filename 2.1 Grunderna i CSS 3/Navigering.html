@@ -39,7 +39,7 @@ a:active#liEx
 		<p>
 			Man kan ändra hur markören ska se ut när man för musen över ett element. Exempel: <a href="" id="linkEx2">En länk</a>. Detta göra man med attributet <code>cursor</code>.
 		</p>
-		<a href="index.html">Tillbaka</a>
+		
 		<h2>Hur man skapar en knappliknande länk</h2>
 		<a href="" class="button">En knapp</a>
 		<p>
@@ -55,6 +55,10 @@ a.button
 	border: 4px solid;
 	border-color:#DFDFDF #666 #333 #858585;
 }
+a.button:hover
+{
+	background: #C5C5C5;
+}
 a.button:active
 {
 	background: #DFDFDF;
@@ -63,7 +67,7 @@ a.button:active
 </pre>
 		</code></p>
 		<h2>Hur man skapar en länk med grafik</h2>
-		<a href="" id="linkG">En länk</a>
+		<a href="http://google.se" id="linkG">En länk</a>
 		<p>
 			För att skapa en vacker länk med hjälp av grafik använder man länkens <code>background-image</code> attribut. Man får tänka på att ange <code>no-repeat</code> och kontrollera bakgrundsbildens placering med <code>background-position</code>. För att placera text i länken använder man <code>padding</code>. Här är koden för knappen här ovanför:
 		</p>
@@ -79,8 +83,166 @@ a#linkG
 	text-decoration: none;
 	color: black;
 }
+a#linkG:visited
+{
+	color: gray;
+}
+a#linkG:hover
+{
+	background-color: #C7C7C7
+}
+a#linkG:active
+{
+	background-color: #B7B7B7
+}
 			</pre>
 		</code>
-
+		<h2>Navigationslistor</h2>
+		<p>
+			En navigationslista är i grunden vanliga länkar. Länkarna är ofta indelade som listföremål (<code>&gtli&lt</code>) i en oordnad lista. Eftersom man inte vill styla alla oordnade listor, list-items och länkar på sidan är det en bra idé att peka ut dem med en klass eller ett id. Detta är enklast genom att ge ul-taggen klassen eller id't. Man brukar sedan ta bort punkterna från listan med <code>list-style-type:none;</code> och nollställa vänster margin och padding. Man gör nollställningen eftersom webläsare indenterar list-items, endel indenterar med padding och endel gör det med margin. Här är den kod vi skrivit hittills:
+		</p>
+		<code>
+			<pre>
+ul.nav {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+			</pre>
+		</code>
+		<h3>Vertikal navigationslista</h3>
+		<p>
+			Eftersom <code>&lta&gt</code> är ett inline element är bredden på länken så stor som sitt innehåll. Man kan heller inte påverka paddingen och margin på ett inline element. Därför bör man göra om länkarna till block element med <code>display: block;</code>. Genom att göra det till ett block element blir det samma bredd på alla knappar och man gör också hela området klickbart. Här är ett exempel:
+		</p>
+			<ul id="navV">
+				<li><a href="">Länk1</a></li>
+				<li><a href="">Länk2</a></li>
+				<li><a href="">Länk3</a></li>
+				<li><a href="">Länk4</a></li>
+			</ul>
+			<p>Och här är koden:</p>
+			<code>
+				<pre>
+ul#nav a
+{
+	border: 1px dashed black;
+	border-left: 4px solid black; 
+	margin: 0.1em 0em;
+	display: block;
+	line-height: 1.25em;
+	height: 1.25em;
+	padding: .5em 1em;
+	color: black;
+	text-decoration: none;
+	font-weight: bolder;
+	background-color: #DDDDDD;
+}
+ul#nav a:hover
+{
+	background-color: #CFCFCF;
+}
+ul#nav a:active
+{
+	background-color: #BFBFBF;
+}
+				</pre>
+			</code>
+			<h3>Horisontell navigationslista</h3>
+			<p>
+				När man vill skapa horisontella navigationslistor så är de två vanligaste sätten att göra det på:
+				<ol>
+					<li>Med hjälp av <code>display: inline-block</code>. Med denna metod blir det dock ett litet mellanrum mellan knapparna. Det går att komma runt detta men vill man att knapparna ska sitta ihop är sätt 2 att föredra.</li>
+					<li>Med hjälp av <code>&ltul&gt</code> och flytande (<code>float</code>) <code>&ltli&gt-element</code>.</li>
+				</ol>
+			</p>
+			<ul id="navH1">
+				<li><a href="">Länk1</a></li>
+				<li><a href="">Länk2</a></li>
+				<li><a href="">Länk3</a></li>
+				<li><a href="">Länk4</a></li>
+			</ul>
+			<code>
+				<pre>
+ul#navH1
+{
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+	width: 21em;
+	border-bottom: 4px solid #000;
+	text-align: center;
+}
+ul#navH1 li
+{
+	display: inline;
+}
+#navH1 a 
+{
+	display: inline-block;
+	border: 1px dashed #000;
+	border-bottom: none;
+	padding: 5px 15px 5px 15px;
+	background-color: #DDDDDD;
+	text-decoration: none;
+	color: black;
+	font-weight: bolder;
+}
+#navH1 a:hover 
+{
+	background-color: #CFCFCF;
+}
+#navH1 a:active 
+{
+	background-color: #BFBFBF;
+}
+				</pre>
+			</code>
+			<ul id="navH2">
+				<li><a href="">Länk1</a></li>
+				<li><a href="">Länk2</a></li>
+				<li><a href="">Länk3</a></li>
+				<li><a href="">Länk4</a></li>
+			</ul>
+			<code>
+				<pre>
+ul#navH2
+{
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+	width: 21em;
+	border-bottom: 4px solid #000;
+	overflow: hidden;
+	
+}
+ul#navH2 li
+{
+	float: left;
+}
+#navH2 a
+{
+	width: 3em;
+	text-align: center;
+	display: block;
+	border: 1px dashed #000;
+	border-bottom: none;
+	padding: 5px 15px 5px 15px;
+	background-color: #DDDDDD;
+	text-decoration: none;
+	color: black;
+	font-weight: bolder;
+}
+#navH2 a:hover
+{
+	background-color: #CFCFCF;
+}
+#navH2 a:active
+{
+	background-color: #BFBFBF;
+}
+				</pre>
+			</code>
+			<h4>"Sliding doors"</h4>
+		<a href="index.html">Tillbaka</a>
 	</body>
 </html>

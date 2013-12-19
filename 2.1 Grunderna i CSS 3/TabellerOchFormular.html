@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>2.6 Tabeller och formulär</title>
+		<link rel="stylesheet" href="styles/style6.css">
+	</head>
+	<body>
+		<h1>Tabeller och formulär</h1>
+		<p>
+			<ul>
+				<li><strong>table-layout</strong> - Med detta attribut anger man hur webläsaren ska rita ut en tabell. Värdena som kan anges är <code>fixed</code> och <code>auto</code>. <code>fixed</code> gör så att alla kolumner ritas ut i samma storlek som den första kolumnen. <code>auto</code> är det värde som är förinställt för tabeller. <code>fixed</code> renderar tabellen fortare än vad <code>auto</code> gör.</li>
+				
+				<li><strong>border-collapse</strong> - Detta attribut tar <code>separate</code> och <code>collapse</code> som värden. Det bestämmer hur ramen på tabellen ska se ut. <code>separate</code> är standardvärdet och gör ett mellanrum mellan varje kolumn, <code>collapse</code> sätter bara ett sträck. Exempel:
+					<table id="tableEx1">
+						<caption>Separate</caption>
+						<tr>
+							<td>Ett</td>
+							<td>Två</td>
+						</tr>
+						<tr>
+							<td>Tre</td>
+							<td>Fyra</td>
+						</tr>
+					</table>
+					<table id="tableEx2">
+						<caption>Collapse</caption>
+						<tr>
+							<td>Ett</td>
+							<td>Två</td>
+						</tr>
+						<tr>
+							<td>Tre</td>
+							<td>Fyra</td>
+						</tr>
+					</table>
+				</li>
+
+				<li><strong>border-spacing</strong> - Anger avståndet mellan kolumnerna. Man anger två värden, det horisontella och vertikala avståndet. Kodexempel: <code>border-spacing: 0 10px;</code></li>
+
+				<li><strong>caption-side</strong> - Anger om man vill ha Caption i toppen eller botten av tabellen. Värdena som kan anges är: <code>top</code> och <code>bottom</code>.
+					<table id="tableEx3">
+						<caption>Topp</caption>
+						<tr>
+							<td>Ett</td>
+							<td>Två</td>
+						</tr>
+						<tr>
+							<td>Tre</td>
+							<td>Fyra</td>
+						</tr>
+					</table>
+					<table id="tableEx4">
+						<caption>Botten</caption>
+						<tr>
+							<td>Ett</td>
+							<td>Två</td>
+						</tr>
+						<tr>
+							<td>Tre</td>
+							<td>Fyra</td>
+						</tr>
+					</table>
+				</li>
+
+				<li><strong>empty-cells</strong> - Ger möjlighet att bestämma hur man ska visa tomma celler. Värdena som kan anges är <code>hide</code> och <code>show</code>. <code>hide</code> gömmer cellen så det bara är tomt. <code>show</code> visar den tomma cellen. Exempel:
+
+					<table id="tableEx5">
+						<caption>Gömd</caption>
+						<tr>
+							<td>Ett</td>
+							<td>Två</td>
+						</tr>
+						<tr>
+							<td>Tre</td>
+							<td></td>
+						</tr>
+					</table>
+					<table id="tableEx6">
+						<caption>Visad</caption>
+						<tr>
+							<td>Ett</td>
+							<td>Två</td>
+						</tr>
+						<tr>
+							<td>Tre</td>
+							<td></td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+		</p>
+		<h2>Att styla formulärer</h2>
+		<p>
+			Eftersom alla olika input-element i en formulär delar samma tagg (<code>&ltinput&gt</code>) och det som får dem att få olika utseenden och egenskaper är värdet på <code>type</code> kan det först verka svårt att styla elementen. Men man kan använda <code>type</code> för att skilja dem åt, man skriver exempelvis <code>input[type="password"]</code> för att markera alla lösenordsfält.
+		</p>
+		<p>
+			Det underlättar också om man ser till att allt får taggar även fast de inte nödvändigtvis skulle behöva det, såsom etiketter. Taggar att föredra är <code>&ltspan&gt</code> och <code>&ltlabel&gt</code>. Båda dessa taggar är dock inline element och ignorerar därför många ändringar man kanske skulle vilja göra som <code>height</code>, <code>width</code> och <code>text-align</code>. Genom att ändra dem till <code>inline-block</code> löser man detta problem.
+		</p>
+		<p>
+			För att få etiketten att vara jämn men toppen av exempelvis en text-area kan man använda <code>text-align: top;</code>. Det blir även både snyggare och mer lättläsligt om man lägger till <code>text-align: right</code> till etiketterna.
+		</p>
+		<p>
+			<code>Form</code> har också psudo-klasser som kan vara värt att känna till. <code>:focus</code> låter dig ändra stilen för ett fält som är markerat. <code>:checked</code> fungerar på radio-knappar och låter dig ändra stilen för dem när de blir markerade. <code>:disabled</code> låter dig ändra stilen på element som blivit inaktiverade. <code>:enabled</code> är tvärt om.
+		</p>
+		<a href="index.html">Tillbaka</a>
+	</body>
+<html>

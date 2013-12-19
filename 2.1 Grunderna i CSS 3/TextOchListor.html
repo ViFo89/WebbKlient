@@ -3,12 +3,8 @@
 	<head>
 		<meta charset="utf8">
 		<title>2.2 Text och listor</title>
-		<style>
-			#firstletter:first-letter{
-				font-size:200%;
-				color:#8A2BE2;
-			}
-		</style>
+		<link rel="stylesheet" href="styles/style2.css">
+
 	</head>
 	<body>
 		<h1>Text och Listor</h1>
@@ -32,25 +28,25 @@
 			Nyckelordet medium är webläsarens grundstorlek för fonten. Här kommer standardvärdena på nyckelorden och hur de renderas.
 			<table>
 				<tr><th>Nyckelord</th><th>Storlek</th><th>Rendering</th></tr>
-				<tr><td>xx-small</td><td>9 pixlar</td><td><p style="font-size:xx-small;" >Här är en mening</p></td></tr>
-				<tr><td>x-small</td><td>10 pixlar</td><td><p style="font-size:x-small;" >Här är en mening</p></td></tr>
-				<tr><td>small</td><td>13 pixlar</td><td><p style="font-size:small;" >Här är en mening</p></td></tr>
-				<tr><td>medium</td><td>16 pixlar</td><td><p style="font-size:medium;" >Här är en mening</p></td></tr>
-				<tr><td>large</td><td>18 pixlar</td><td><p style="font-size:large;" >Här är en mening</p></td></tr>
-				<tr><td>x-large</td><td>24 pixlar</td><td><p style="font-size:x-large;" >Här är en mening</p></td></tr>
-				<tr><td>xx-large</td><td>32 pixlar</td><td><p style="font-size:xx-large;" >Här är en mening</p></td></tr>
+				<tr><td>xx-small</td><td>9 pixlar</td><td><p id="fontSizeEx1">Här är en mening</p></td></tr>
+				<tr><td>x-small</td><td>10 pixlar</td><td><p id="fontSizeEx2">Här är en mening</p></td></tr>
+				<tr><td>small</td><td>13 pixlar</td><td><p id="fontSizeEx3">Här är en mening</p></td></tr>
+				<tr><td>medium</td><td>16 pixlar</td><td><p id="fontSizeEx4">Här är en mening</p></td></tr>
+				<tr><td>large</td><td>18 pixlar</td><td><p id="fontSizeEx5">Här är en mening</p></td></tr>
+				<tr><td>x-large</td><td>24 pixlar</td><td><p id="fontSizeEx6">Här är en mening</p></td></tr>
+				<tr><td>xx-large</td><td>32 pixlar</td><td><p id="fontSizeEx7">Här är en mening</p></td></tr>
 			</table>
 		</p>
 		<p>
 			En av de olika storleksenheterna är procent och precis som nyckelorden är den beroende av webläsarens inställda standardvärde på fonten. Skillnaden är att med procent har man många fler än 7 storlekar att välja mellan. Man anger alltså antal procent av webbläsarens standardstorlek. Font-size är en egenskap som ärvs ner till sina barn, med det menas att taggar som har en font-size specifierat ärver ner det värdet. Alltså kan 100% bero på storleken som ärvs från en annan tagg.
 			<table>
 				<tr><th>Storlek</th><th>Rendering</th></tr>
-				<tr><td>50%</td><td><p style="font-size:50%;" >Här är en mening</p></td></tr>
-				<tr><td>75%</td><td><p style="font-size:75%;" >Här är en mening</p></td></tr>
-				<tr><td>100%</td><td><p style="font-size:100%;" >Här är en mening</p></td></tr>
-				<tr><td>125%</td><td><p style="font-size:125%;" >Här är en mening</p></td></tr>
-				<tr><td>150%</td><td><p style="font-size:150%;" >Här är en mening</p></td></tr>
-				<tr><td>200%</td><td><p style="font-size:200%;" >Här är en mening</p></td></tr>
+				<tr><td>50%</td><td><p id="fontSizeEx8">Här är en mening</p></td></tr>
+				<tr><td>75%</td><td><p id="fontSizeEx9" style="font-size:75%;" >Här är en mening</p></td></tr>
+				<tr><td>100%</td><td><p id="fontSizeEx10" style="font-size:100%;" >Här är en mening</p></td></tr>
+				<tr><td>125%</td><td><p id="fontSizeEx11" style="font-size:125%;" >Här är en mening</p></td></tr>
+				<tr><td>150%</td><td><p id="fontSizeEx12" style="font-size:150%;" >Här är en mening</p></td></tr>
+				<tr><td>200%</td><td><p id="fontSizeEx13" style="font-size:200%;" >Här är en mening</p></td></tr>
 			</table>
 		</p>
 		<p>
@@ -72,46 +68,47 @@
 			<li>font-weight - Detta anger om man vill göra texten fet eller inte. Anges såhär: font-weight: bold; Här är rendering på olika alternativ.
 			<table>
 				<tr><th>Nyckelord</th><th>Rendering</th></tr>
-				<tr><td>100</td><td><p style="font-weight: 100;" >Här är en mening</p></td></tr>
-				<tr><td>200</td><td><p style="font-weight: 200;" >Här är en mening</p></td></tr>
-				<tr><td>300</td><td><p style="font-weight:300;" >Här är en mening</p></td></tr>
-				<tr><td>400</td><td><p style="font-weight:400;" >Här är en mening</p></td></tr>
-				<tr><td>500</td><td><p style="font-weight:500;" >Här är en mening</p></td></tr>
-				<tr><td>600</td><td><p style="font-weight:600;" >Här är en mening</p></td></tr>
-				<tr><td>700</td><td><p style="font-weight:700;" >Här är en mening</p></td></tr>
-				<tr><td>800</td><td><p style="font-weight:800;" >Här är en mening</p></td></tr>
-				<tr><td>900</td><td><p style="font-weight:900;" >Här är en mening</p></td></tr>
-				<tr><td>bold</td><td><p style="font-weight:bold;" >Här är en mening</p></td></tr>
-				<tr><td>bolder</td><td><p style="font-weight:bolder;" >Här är en mening</p></td></tr>
-				<tr><td>lighter</td><td><p style="font-weight:lighter;" >Här är en mening</p></td></tr>
-				<tr><td>normal</td><td><p style="font-weight:normal;" >Här är en mening</p></td></tr>
+				<tr><td>100</td><td><p id="fontWeightEx1">Här är en mening</p></td></tr>
+				<tr><td>200</td><td><p id="fontWeightEx2">Här är en mening</p></td></tr>
+				<tr><td>300</td><td><p id="fontWeightEx3">Här är en mening</p></td></tr>
+				<tr><td>400</td><td><p id="fontWeightEx4">Här är en mening</p></td></tr>
+				<tr><td>500</td><td><p id="fontWeightEx5">Här är en mening</p></td></tr>
+				<tr><td>600</td><td><p id="fontWeightEx6">Här är en mening</p></td></tr>
+				<tr><td>700</td><td><p id="fontWeightEx7">Här är en mening</p></td></tr>
+				<tr><td>800</td><td><p id="fontWeightEx8">Här är en mening</p></td></tr>
+				<tr><td>900</td><td><p id="fontWeightEx9">Här är en mening</p></td></tr>
+				<tr><td>bold</td><td><p id="fontWeightEx10">Här är en mening</p></td></tr>
+				<tr><td>bolder</td><td><p id="fontWeightEx11">Här är en mening</p></td></tr>
+				<tr><td>lighter</td><td><p id="fontWeightEx12">Här är en mening</p></td></tr>
+				<tr><td>normal</td><td><p id="fontWeightEx13">Här är en mening</p></td></tr>
 			</table>
 			Beroende på vad du har för font på din webläsare kanske inte ändringarna visas men 400 är samma som normal och 700 är samma som bold. Man kan även ange inherit och då ärver den sin fethet.
 			</li>
 		</ul>
 		<h2>Text</h2>
 		<ul>
-			<li>letter-spacing - Här kan man ange mellanrummet mellan bokstäverna i ord. Man kan ge både positiva och negativa värden. Normalt: Här är en mening, Positivt värde: <span style="letter-spacing: 1.5px;">Här är en mening</span>, Negativt värde: <span style="letter-spacing: -1.5px;">Här är en mening</span>.</li>
-			<li>word-spacing - Med denna anger du hur långt ett mellanslag ska vara. Normalt: Här är en mening, Positivt värde: <span style="word-spacing: 2px;">Här är en mening</span>, Negativt värde: <span style="word-spacing: -2px;">Här är en mening</span>.</li>
+			<li>letter-spacing - Här kan man ange mellanrummet mellan bokstäverna i ord. Man kan ge både positiva och negativa värden. Normalt: Här är en mening, Positivt värde: <span id="letterSpacingEx1">Här är en mening</span>, Negativt värde: <span id="letterSpacingEx2">Här är en mening</span>.</li>
+			<li>word-spacing - Med denna anger du hur långt ett mellanslag ska vara. Normalt: Här är en mening, Positivt värde: <span id="wordSpacingEx1">Här är en mening</span>, Negativt värde: <span id="wordSpacingEx2">Här är en mening</span>.</li>
 			<li>line-height - Anger radavståndet. Man anger antingen i em, px, procent eller genom att bara skriva ett nummer. Webläsaren muliplicerar då bara standardvärdet med numret. Exempel:
 				<br>line-height: 70%:
-				<p style=" line-height:70%;">
-				This is a paragraph with a smaller line-height.<br>
-				This is a paragraph with a smaller line-height.<br>
-				This is a paragraph with a smaller line-height.<br>
+				<p id="lineHeightEx1">
+					This is a paragraph with a smaller line-height.<br>
+					This is a paragraph with a smaller line-height.<br>
+					This is a paragraph with a smaller line-height.<br>
 				</p>
 				line-height: 200%:
-				<p style=" line-height:200%;">
-				This is a paragraph with a bigger line-height.<br>
-				This is a paragraph with a bigger line-height.<br>
-				This is a paragraph with a bigger line-height.<br>
-				</p></li>
+				<p id="lineHeightEx2">
+					This is a paragraph with a bigger line-height.<br>
+					This is a paragraph with a bigger line-height.<br>
+					This is a paragraph with a bigger line-height.<br>
+				</p>
+			</li>
 			<li>text-align - Används för att placera text på hemsidan. Värdena som kan anges är left, right, justify och center. Exempel: </li>
-			<p style="text-align: right;">Här är en mening</p>
-			<p style="text-align: center;">Här är en mening</p>
-			<p style="text-align: left;">Här är en mening</p>
-			<li>text-decoration - används för att dekorera text med understruket, överstruket eller ett stäck ovanför den valda delen. Värdena som kan anges är: overline, line-through och underline. Dessa går att kombinera. Renderas: <span style="text-decoration:overline line-through underline;">Här är en mening</span> </li>
-			<li>text-shadow - används för att lägga till skugga på text. Anges såhär: <code>text-shadow: -4px 4px 3px #999999</code> Rednderas: <span style="text-shadow:-4px 4px 3px #999999;">Här är en mening</span>. Första värdet är vart skuggan ska placeras horisontellt, eftersom det i det här fallet är negativt placeras det 4px till vänster. andra värdet är det vertikala värdet, negativt är upp positivt är ner. Tredje värdet är hur suddig skuggan ska vara. Hexadecimala värdet är färgen på skuggan.</li>
+			<p id="textAlignEx1">Här är en mening</p>
+			<p id="textAlignEx2">Här är en mening</p>
+			<p id="textAlignEx3">Här är en mening</p>
+			<li>text-decoration - används för att dekorera text med understruket, överstruket eller ett stäck ovanför den valda delen. Värdena som kan anges är: overline, line-through och underline. Dessa går att kombinera. Renderas: <span id="textDecorationEx">Här är en mening</span> </li>
+			<li>text-shadow - används för att lägga till skugga på text. Anges såhär: <code>text-shadow: -4px 4px 3px #999999</code> Rednderas: <span id="textShadowEx">Här är en mening</span>. Första värdet är vart skuggan ska placeras horisontellt, eftersom det i det här fallet är negativt placeras det 4px till vänster. andra värdet är det vertikala värdet, negativt är upp positivt är ner. Tredje värdet är hur suddig skuggan ska vara. Hexadecimala värdet är färgen på skuggan.</li>
 			<li>text-indent - Skapar en indentering på första raden i en mening (som i endel böcker).</li>
 			<li>text-transform - Man kan ange uppercase, lowercase eller capitalize. Uppercase gör alla boksätver stora, lowercase gör alla bokstäver små och capitalize gör första bokstaven stor.</li>
 			<li>white-space - Här specifierar man hur white-space ska hanteras i ett element. Om man skulle ange ett två ord med två mellanslag mella sig kommer webläsaren rendera det som ett mellanslag, detta kan ändras med <code>pre</code> värdet. Om en rad inte passar på en sida kommer webläsaren automatiskt att dela upp raden i flera rader, detta kan också ändras m.h.a <code>no-wrap</code> värdet.</li>
@@ -126,11 +123,11 @@
 			<li>list-style - Används som en forkortning av de tre attribut som kommer under. Man skriver såhär: <code>list-style: disc url(images/bullet.gif) inside;</code>. Se neranför för beskrivning av de olika värdena.</li>
 			<li>list-style-image - Denna använder man om man vill lägga till egna bilder som listdekoration.</li>
 			<li>list-style-position - Om man vill att listdekorationen ska renderas innanför eller utanför "content flow". Exempel:
-				<ul style="list-style-position: inside;">
+				<ul id="listStylePositionEx1">
 					<li>inside</li>
 				</ul>
 
-				<ul style="list-style-position: outside;">
+				<ul id="listStylePositionEx2">
 					<li>outside</li>
 				</ul>
 			</li>

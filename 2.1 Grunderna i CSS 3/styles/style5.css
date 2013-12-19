@@ -1,16 +1,16 @@
-a:link#linkEx1
+a#linkEx1:link
 {
 	color: orange;
 }
-a:visited#linkEx1
+a#linkEx1:visited
 {
 	color: red;
 }
-a:hover#linkEx1
+a#linkEx1:hover
 {
 	background-color: green;
 }
-a:active#linkEx1
+a#linkEx1:active
 {
 	color: black;
 	font-weight: bold;
@@ -28,6 +28,10 @@ a.button
 	border: 4px solid;
 	border-color:#DFDFDF #666 #333 #858585;
 }
+a.button:hover
+{
+	background: #C5C5C5;
+}
 a.button:active
 {
 	background: #DFDFDF;
@@ -36,10 +40,118 @@ a.button:active
 a#linkG
 {
 	border:1px dashed gray;
-	background: #E7E7E7 url(../icon1.png) no-repeat left center;
+	background: #E7E7E7 url(../pictures/icon1.png) no-repeat left center;
 	background-size: 35px;
 	font-weight: bold;
 	padding: 10px 7px 10px 45px;
 	text-decoration: none;
 	color: black;
+}
+a#linkG:visited
+{
+	color: gray;
+}
+a#linkG:hover
+{
+	background-color: #C7C7C7
+}
+a#linkG:active
+{
+	background-color: #B7B7B7
+}
+ul#navV
+{
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+	width: 9em;
+}
+ul#navV a
+{
+	border: 1px dashed black;
+	border-left: 4px solid black; 
+	margin: 0.1em 0em;
+	display: block;
+	line-height: 1.25em;
+	height: 1.25em;
+	padding: .5em 1em;
+	color: black;
+	text-decoration: none;
+	font-weight: bolder;
+	background-color: #DDDDDD;
+}
+ul#navV a:hover
+{
+	background-color: #CFCFCF;
+}
+ul#navV a:active
+{
+	background-color: #BFBFBF;
+}
+ul#navH1
+{
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+	width: 21em;
+	border-bottom: 4px solid #000;
+	text-align: center;
+}
+ul#navH1 li
+{
+	display: inline;
+}
+#navH1 a 
+{
+	display: inline-block;
+	border: 1px dashed #000;
+	border-bottom: none;
+	padding: 5px 15px 5px 15px;
+	background-color: #DDDDDD;
+	text-decoration: none;
+	color: black;
+	font-weight: bolder;
+}
+#navH1 a:hover 
+{
+	background-color: #CFCFCF;
+}
+#navH1 a:active 
+{
+	background-color: #BFBFBF;
+}
+ul#navH2
+{
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+	width: 21em;
+	border-bottom: 4px solid #000;
+	overflow: hidden;
+	
+}
+ul#navH2 li
+{
+	float: left;
+}
+#navH2 a
+{
+	width: 3em;
+	text-align: center;
+	display: block;
+	border: 1px dashed #000;
+	border-bottom: none;
+	padding: 5px 15px 5px 15px;
+	background-color: #DDDDDD;
+	text-decoration: none;
+	color: black;
+	font-weight: bolder;
+}
+#navH2 a:hover
+{
+	background-color: #CFCFCF;
+}
+#navH2 a:active
+{
+	background-color: #BFBFBF;
 }
