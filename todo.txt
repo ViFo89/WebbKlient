@@ -1,1 +1,3 @@
 Navigering - Sliding doors
+HTML - RSS
+Sidlayout - Elastisk webbsideslayaut ELLER Responsiv?

@@ -25,7 +25,7 @@
 		<p>
 			För att ange storleken på en font använder man font-size. Man kan antingen ange storleken i en av de olika storleksenheterna som finns i css eller ange nyckelord.
 			Nyckelorden är xx-small, x-small, small, medium, large, x-large och xx-large.
-			Nyckelordet medium är webläsarens grundstorlek för fonten. Här kommer standardvärdena på nyckelorden och hur de renderas.
+			Nyckelordet medium är webbläsarens grundstorlek för fonten. Här kommer standardvärdena på nyckelorden och hur de renderas.
 			<table>
 				<tr><th>Nyckelord</th><th>Storlek</th><th>Rendering</th></tr>
 				<tr><td>xx-small</td><td>9 pixlar</td><td><p id="fontSizeEx1">Här är en mening</p></td></tr>
@@ -38,7 +38,7 @@
 			</table>
 		</p>
 		<p>
-			En av de olika storleksenheterna är procent och precis som nyckelorden är den beroende av webläsarens inställda standardvärde på fonten. Skillnaden är att med procent har man många fler än 7 storlekar att välja mellan. Man anger alltså antal procent av webbläsarens standardstorlek. Font-size är en egenskap som ärvs ner till sina barn, med det menas att taggar som har en font-size specifierat ärver ner det värdet. Alltså kan 100% bero på storleken som ärvs från en annan tagg.
+			En av de olika storleksenheterna är procent och precis som nyckelorden är den beroende av webbläsarens inställda standardvärde på fonten. Skillnaden är att med procent har man många fler än 7 storlekar att välja mellan. Man anger alltså antal procent av webbläsarens standardstorlek. Font-size är en egenskap som ärvs ner till sina barn, med det menas att taggar som har en font-size specifierat ärver ner det värdet. Alltså kan 100% bero på storleken som ärvs från en annan tagg.
 			<table>
 				<tr><th>Storlek</th><th>Rendering</th></tr>
 				<tr><td>50%</td><td><p id="fontSizeEx8">Här är en mening</p></td></tr>
@@ -60,7 +60,7 @@
 		<ul>
 			<li>font - Detta är ett sätt att ange en fonts värden på en rad. Med detta kan man alltså ersätta font-style, font-variant, font-weight, font-size, lineheight, and font-family. Skrivs såhär: <code>font: italic bold small-caps 18px/150% Arial, Helvetica, sans-serif;</code> Alltså mellanslag mellan de olika värdena och komma mellan font-family värdena. Man måste ange font size och font family, allt annat är valbart.</li>
 			<li>font-family - För att ange en font på en sida använder man attributet <code>font-family:</code> följt av den font man vill använda. Man brukar ofta välja att ange flera olika fonter ifall den man egentligen vill använda inte finns på sidan. Det görs såhär: <code>font-family: Arial, Helvetica, sans-serif;</code></li>
-			<li>font-stretch - Detta tillåter att ange hur bred eller smal man vill att texten ska vara. De olika värdena man kan ange är: wider, narrower, ultra-condensed, extra-condensed, semi-condensed, normal, semi-expanded, expanded, extra-expanded, ultra-expanded och inherit. Det finns inga webläsare än som stödjer denna tagg. </li>
+			<li>font-stretch - Detta tillåter att ange hur bred eller smal man vill att texten ska vara. De olika värdena man kan ange är: wider, narrower, ultra-condensed, extra-condensed, semi-condensed, normal, semi-expanded, expanded, extra-expanded, ultra-expanded och inherit. Det finns inga webbläsare än som stödjer denna tagg. </li>
 			<li>font-size - Med detta attribut anger man vilken storlek man vill ha på fonten.</li>
 			<li>font-size-adjust - Ifall den första fonten man önskat inte kan visas så kan det bli en skillnad när då istället andrahandsfonten ska visas som exempelvis är större än förstahandsfonten. Detta går att justera med font-size-adjust. </li>
 			<li>font-style - Här anger man om man vill att fonten ska renderas i bold eller italic. Värden man kan ange är: bold, italic och oblique.</li>
@@ -82,14 +82,14 @@
 				<tr><td>lighter</td><td><p id="fontWeightEx12">Här är en mening</p></td></tr>
 				<tr><td>normal</td><td><p id="fontWeightEx13">Här är en mening</p></td></tr>
 			</table>
-			Beroende på vad du har för font på din webläsare kanske inte ändringarna visas men 400 är samma som normal och 700 är samma som bold. Man kan även ange inherit och då ärver den sin fethet.
+			Beroende på vad du har för font på din webbläsare kanske inte ändringarna visas men 400 är samma som normal och 700 är samma som bold. Man kan även ange inherit och då ärver den sin fethet.
 			</li>
 		</ul>
 		<h2>Text</h2>
 		<ul>
 			<li>letter-spacing - Här kan man ange mellanrummet mellan bokstäverna i ord. Man kan ge både positiva och negativa värden. Normalt: Här är en mening, Positivt värde: <span id="letterSpacingEx1">Här är en mening</span>, Negativt värde: <span id="letterSpacingEx2">Här är en mening</span>.</li>
 			<li>word-spacing - Med denna anger du hur långt ett mellanslag ska vara. Normalt: Här är en mening, Positivt värde: <span id="wordSpacingEx1">Här är en mening</span>, Negativt värde: <span id="wordSpacingEx2">Här är en mening</span>.</li>
-			<li>line-height - Anger radavståndet. Man anger antingen i em, px, procent eller genom att bara skriva ett nummer. Webläsaren muliplicerar då bara standardvärdet med numret. Exempel:
+			<li>line-height - Anger radavståndet. Man anger antingen i em, px, procent eller genom att bara skriva ett nummer. webbläsaren muliplicerar då bara standardvärdet med numret. Exempel:
 				<br>line-height: 70%:
 				<p id="lineHeightEx1">
 					This is a paragraph with a smaller line-height.<br>
@@ -111,7 +111,7 @@
 			<li>text-shadow - används för att lägga till skugga på text. Anges såhär: <code>text-shadow: -4px 4px 3px #999999</code> Rednderas: <span id="textShadowEx">Här är en mening</span>. Första värdet är vart skuggan ska placeras horisontellt, eftersom det i det här fallet är negativt placeras det 4px till vänster. andra värdet är det vertikala värdet, negativt är upp positivt är ner. Tredje värdet är hur suddig skuggan ska vara. Hexadecimala värdet är färgen på skuggan.</li>
 			<li>text-indent - Skapar en indentering på första raden i en mening (som i endel böcker).</li>
 			<li>text-transform - Man kan ange uppercase, lowercase eller capitalize. Uppercase gör alla boksätver stora, lowercase gör alla bokstäver små och capitalize gör första bokstaven stor.</li>
-			<li>white-space - Här specifierar man hur white-space ska hanteras i ett element. Om man skulle ange ett två ord med två mellanslag mella sig kommer webläsaren rendera det som ett mellanslag, detta kan ändras med <code>pre</code> värdet. Om en rad inte passar på en sida kommer webläsaren automatiskt att dela upp raden i flera rader, detta kan också ändras m.h.a <code>no-wrap</code> värdet.</li>
+			<li>white-space - Här specifierar man hur white-space ska hanteras i ett element. Om man skulle ange ett två ord med två mellanslag mella sig kommer webbläsaren rendera det som ett mellanslag, detta kan ändras med <code>pre</code> värdet. Om en rad inte passar på en sida kommer webbläsaren automatiskt att dela upp raden i flera rader, detta kan också ändras m.h.a <code>no-wrap</code> värdet.</li>
 		</ul>
 		<h2>Stycken</h2>
 		<ul>
