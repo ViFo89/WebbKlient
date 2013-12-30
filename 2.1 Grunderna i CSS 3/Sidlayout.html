@@ -15,24 +15,27 @@
 		</p>
 		<h2>Position</h2>
 		<ul>
-			<li><strong>position</strong> - </li>
-			<li><strong>top</strong> - </li>
-			<li><strong>left</strong> - </li>
-			<li><strong>bottom</strong> - </li>
-			<li><strong>right</strong> - </li>
-			<li><strong>z-index</strong> - </li>
-			<li><strong>float</strong> - </li>
-			<li><strong>clear</strong> - </li>
+			<li><strong>position</strong> - Man kan bestämma hur elementen på en sida ska renderas. Nyckelorden är <code>static</code>, <code>absolute</code>, <code>fixed</code> och <code>relative</code>. <code>static</code> gör så att elementen renderas i ordning, detta är standardvärdet. <code>absolute</code> gör att elementet placeras relativt till sin förälders placering. <code>fixed</code> gör att elementet renderas relativt till webbläsaren, effekten blir att elementet står still även fast man bläddrar på sidan. <code>relative</code> gör att elementet placeras relativt till sin egentliga placering.</li>
+			<li><strong>top</strong> - Det här attributet (och de tre som kommer här nedan) har olika betydelser beroende på vilket värde <code>position</code> har. Men <code>top</code> bestämmer avstådet från toppen, vilken "topp" som menas bestäms av <code>position</code>.</li>
+			<li><strong>left</strong> - Det här attributet har olika betydelser beroende på vilket värde <code>position</code> har. Men <code>left</code> bestämmer avstådet från vänsterkanten, vilken "vänsterkant" som menas bestäms av <code>position</code>.</li>
+			<li><strong>bottom</strong> - Det här attributet har olika betydelser beroende på vilket värde <code>position</code> har. Men <code>bottom</code> bestämmer avstådet från botten, vilken "bott" som menas bestäms av <code>position</code>.</li>
+			<li><strong>right</strong> - Det här attributet har olika betydelser beroende på vilket värde <code>position</code> har. Men <code>right</code> bestämmer avstådet från högerkanten, vilken "högerkant" som menas bestäms av <code>position</code>.</li>
+			<li><strong>z-index</strong> - När man använder absolut positionering för att placera element kan dom hamna ovanpå varandra. För att bestämma vilket element som ska hamna överst använder man <code>z-index</code>.</li>
+			<li><strong>float</strong> - Används för att ändra flödet på en sida. Man använder värdena <code>left</code> eller <code>right</code> för att få något att hålla sig till en sida.</li>
+			<li><strong>clear</strong> - Används för att förbjuda ett flytande element. Man kan använda nyckelorden <code>left</code>, <code>right</code> och <code>both</code>.</li>
 		</ul>
 		<h2>Storlek</h2>
 		<ul>
-			<li><strong>width</strong> - </li>
-			<li><strong>height</strong> - </li>
-			<li><strong>max-width</strong> - </li>
-			<li><strong>max-height</strong> - </li>
-			<li><strong>min-width</strong> - </li>
-			<li><strong>min-height</strong> - </li>
-			<li><strong>vertical-align</strong> - </li>
+			<li><strong>width</strong> - Anger bredden på ett element.</li>
+			<li><strong>height</strong> - Anger höjden på ett element.</li>
+			<li><strong>max-width</strong> - Anger maxbredder för ett element. Om man har angett en mått som t.ex. påverkas av skärmstorleken kan man specificera här så det måttet inte blir större än ett absolut mått.</li>
+			<li><strong>max-height</strong> - Anger maxhöjden för ett element. Om man har angett en mått som t.ex. påverkas av skärmstorleken kan man specificera här så det måttet inte blir större än ett absolut mått.</li>
+			<li><strong>min-width</strong> - Anger minimumbredder för ett element. Om man har angett en mått som t.ex. påverkas av skärmstorleken kan man specificera här så det måttet inte blir mindre än ett absolut mått.</li>
+			<li><strong>min-height</strong> - Anger minimumhöjden för ett element. Om man har angett en mått som t.ex. påverkas av skärmstorleken kan man specificera här så det måttet inte blir mindre än ett absolut mått.</li>
+			<li><strong>vertical-align</strong> - Detta påverkar hur ett element ska renderas vertikalt relativt till ett annat element. Exempel:
+			<p>Det här är <span id="vertEx">en mening</span>.</p>
+			I det här fallet har "en mening" stilen <code>vertical-align: 75%;</code>
+			</li>
 		</ul>
 		<a href="index.html">Tillbaka</a>
 	</body>
