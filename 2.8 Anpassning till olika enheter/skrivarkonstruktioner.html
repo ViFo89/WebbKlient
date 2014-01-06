@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>Skrivarkonstruktioner</title>
+	</head>
+	<body>
+		<h1>Skrivarkonstruktioner</h1>
+		<h2>@page</h2>
+		<p>
+			Denna kod anger man i css filen eller style-taggen och i den anger man regler för en så kallad "page box". Det är en låda med begränsad storlek som olika innehåll renderas i. "Page box" består av två olika områden, sid-delen och marginal-delen. Det är i sid-delen sidans innehåll renderas. Marginal-delen är det som omger sid-delen. Man kan även specificera orientering i <code>@page</code>. För att ange hur stor sid-delen ska vara anger man måtten i <code>size</code>.
+		</p>
+		<p>
+			Om man inte anger annat så förekommer sid-brytning endast när sidformatet ändras eller när innehållet svämmar över "page boxen". För att begränsa vart sidan kan brytas kan man ange <code>page-brake-after</code>, <code>page-brake-before</code> och <code>page-brake-inside</code>. <code>page-brake-after</code> och <code>page-brake-before</code> accepterar <code>auto</code>, <code>always</code>, <code>avoid</code>, <code>left</code> och <code>right</code> som nyckelord.
+			<code>auto</code> är standard och gör att sidbrytningar genereras när de behövs. <code>always</code> framtvingar en radbrytning. <code>avoid</code> gör att man undviker sidbrytning. <code>left</code> och <code>right</code> framtvingar sidbrytning så att elementet renderas på höger- eller vänster-sidan 
+		</p>
+		<p>
+			Exempelvis om man vill att en sidbrytning ska ske innan en h1-rubrik så den hamnar på ett nytt uppslag använder man: <code>h1 { page-break-before: right; }</code>
+			och om man vill att en sidbrytning inte ska ske efter en h2-rubrik använder man: <code>h2 { page-break-after:avoid; }</code>.
+		</p>
+		<p>
+			I skrifter finns det något som kallas orphans och widows. Orphans är när bara någon rad av en paragraf hamnar på botten av en sida p.g.a. en sidbrytning och widows är när bara någon rad hamnar på toppen av en sida p.g.a. en sidbrytning.
+			Så i <code>@page</code> kan man ange hur många rader av en paragraf som får hamna ensam med <code>orphans</code> eller <code>widow</code>. Man anger då ett nummer efter något av attributen. 
+		</p>
+		<p>
+			Exempel: <code>@page { orphans: 4; widow: 5; }</code>. Detta gör att det endast kan vara 4 eller mer rader vid ett orphan-tillfälle och 5 eller mer vid ett widow-tillfälle.
+
+		</p>
+		<p>
+			Med <code>marks</code> kan man ange om man vill ha "crops" och/eller kryssmärken på utskriften. Dessa "crops" agerar som riktlinjer om man vill klippa eller skära ut innehållet från det utskrivna pappret och kryssmärkena används för att kunna liera sidor med varandra. Exempel: <code>@page { marks: crop cross; }</code>
+		</p>
+	</body>
+<html>

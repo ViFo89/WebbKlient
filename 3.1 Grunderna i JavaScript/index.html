@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>3.1 Grunderna i JavaScript</title>
+	</head>
+	<body>
+	<h1>Grunderna i JavaScript</h1>
+	<h2>Externt länkad JavaScript-fil och dess fördelar</h2>
+	<p>
+		Man kan både placera sin JavaScript-kod internt i html-filen eller externt i en egen js-fil. För att skriva intern JS-kod skriver man taggen <code>&ltscript&gt</code> följt av JS-kod och sedan en sluttag. Intern JS kan vara en fördel om man bara vill använda den koden på endast en sida.
+	</p>
+	<p>
+		Fördelarna med extern JS-kod är att man kan använda samma kod i flera olika html-dokument. En extern fil är även lättare att läsa och att underhålla. Man lägger till js-filer i sitt html-dokument med hjälp av script-taggen, såhär: <code>&ltscript src="namn.js"&gt&lt/script&gt</code>
+	</p>
+	<h2>Satser</h2>
+	<p>
+		Man kan säga att en sats i JS är ett steg under körning av koden. Exempel på en sats är <code>alert('Hello World!');</code> Oftast är en sats på en rad och slutar alltid med ett semikolon. Man kan placera flera satser på en och samma rad men det gör koden svårare att tyda.
+	</p>
+	<h2>Datatyper</h2>
+	<p>
+		I JS finns det tre grunddatatyper. Dessa är nummer, strängar och booleans. Strängar är tecken, ord och meningar. En sträng ska omges av citat-tecken eller apostrof-tecken. Nummer är heltal och flyttal, dessa kan användas för att räkna. Boolean kan endast vara två värden, sant eller falskt.
+
+	</p>
+	<h3>Exempel på Strängar</h3>
+	<ul>
+		<li>Kalle</li>
+		<li>Hej på er</li>
+		<li>Jag är 50 år</li>
+		<li>&¤#$</li>
+		<li>a</li>
+	</ul>
+	<h3>Exempel på Nummer</h3>
+	<ul>
+		<li>23</li>
+		<li>-71</li>
+		<li>10.2</li>
+		<li>1.1532</li>
+	</ul>
+	<h3>Booleans värden</h3>
+	<ul>
+		<li>true</li>
+		<li>false</li>
+	</ul>
+	<h2>Variabler och arrayer</h2>
+	<p>
+		Variabler är ett utrymme som man namnger och som man sedan kan använda, ändra eller ta bort. För att skapa en variabel anger man nyckelordet <code>var</code> följt av ett namn på variabeln. Såhär: <code>var variabelNamn</code>.
+	</p>
+	<h3>Regler för namngivning av variabler</h3>
+	<ul>
+		<li>Namnet måste börja med en bokstav, $ eller _.</li>
+		<li>Namnet kan endast innehålla bokstäver, nummer, $ eller _.</li>
+		<li>Variabelnamn är skiftlägeskänslig. <code>VarNamn</code> är inte samma som <code>varNamn</code>.</li>
+		<li>Undvik att använda nyckelord som redan finns i JavaScript.</li>
+	</ul>
+	<p>
+		För att tilldela en variabel ett värde skriver man namnet på variabeln, ett lika med tecken följt av värdet man vill tilldela: <code>var age = 43;</code>
+	</p>
+	<h3>Arrayer</h3>
+	<p>
+		Om man skulle vilja hålla reda på ett lite större antal variabler kan man använda sig av en array. För att skapa en array använder man hakparateser:<br>
+		<code>var dagar = ['mån', 'tis', 'ons', 'tor', 'fre', 'lör', 'sön'];</code><br>
+		Här har vi alltså en array med alla veckans dagar. För att sedan få ut den dagen man vill ha skriver man variabelnamnet följt av hakparanteser och det nummret på i arrayen man vill ha. Så om vi vill ha ut onsdag använder vi nummer 2: <br><code>dagar[2];</code>
+	</p>
+	<p>
+		För att lägga till ett objekt i slutet av en array kan man använda push-kommandot:
+		<br><code>var numbers = [1, 2, 3];<br>numbers.push(4);</code><br>
+		Om man vill lägga till ett objekt i början av arrayen använder man kommandot <code>unshift</code> på samma sätt som <code>push</code>.
+	</p>
+	<h2>Operatorer och stränghantering</h2>
+	<p>
+		Operatorer är tecken man använder för att räkna matte i JS. Dessa är +, -, * och /. Dessa fungerar precis som man skulle kunna förvänta sig att de fungerar. Man kan även använda dom tillsammans med variabler: 
+		<code><br>var tal1 = 2, tal2 = 3;<br>var tal3 = tal1 * tal2;</code><br>
+		Efter detta har <code>tal3</code> värdet 6. Man kan även använda paranteser om man vill att exempelvis plus ska räknas innan gånger. Vad som räknas först fungerar precis som i matten.
+	</p>
+	<p>
+		Man kan även använda plus på strängar, detta kallas konkatenering. Det som händer är att man helt enkelt slår ihop de två strängarna till en sammansatt sträng.
+		<code><br>
+			var fnamn = 'kalle';<br>
+			var enamn = 'svensson';<br>
+			var namn = fnamn + ' ' + enamn;
+		</code><br>
+		Resultatet av detta blir att <code>namn</code> tilldelas värdet <strong>kalle svensson</strong>.
+	</p>
+	<p>
+		Om man använder plus mellan en sträng och ett nummer är det två saker som händer. För det förstsa görs nummret om till en sträng och för det andra slås de ihop. Om man vill att en string ska behandlas som ett nummer kan man sätta ett plus innan man anger variabelnamnet (utan mellanslag):
+		<code><br>
+		var num1 = '2';<br>
+		var num2 = 4;<br>
+		var tot = +num1 + num2;
+		</code><br>
+		<code>tot</code> får i det här fallet värdet 6. Pluset innan <code>num1</code> gör att strängen behandlas som ett nummer. Ett annat sätt att göra samma sak är att använda kommandot <code>Number()</code>: <br><code>var num1 = Number('3');</code>
+	</p>
+	<h2>Flödeshantering (if-satser och loopar)</h2>
+	<p>
+		För att ett program ska kunna göra olika saker när det körs använder man en if-sats. En if-sats används för att kunna göra något som endast ska göras om ett villkor uppfylls. Om man exempelvis skulle vilja skriva ut 'hej' på skärmen endast om man är den 1000e besökaren skriver man såhär:<br>
+		<code>
+			if(visitors == 1000){<br>
+				alert('Hej!');<br>
+			}<br>
+		</code><br>
+		Om man vill göra något om inte if-satsen skulle gälla använder man <code>else</code>. Man skriver det då efter if-satsens slutparantes och alla gånger if-satsens villkor är falskt kommer man gå in i else. Om man vill ange flera villkor använder man <code>else if</code>. Så här kan det se ut när man använder alla delar tillsamans:
+		<code><br>
+			if(nummer &lt 5){
+				alert('Mindre än 5');
+			}<br>
+			else if(nummer > 5){
+				alert('Större än 5');
+			}<br>
+			else {
+				alert('Lika med 5');
+			}<br>
+		</code>
+	</p>
+	<p>
+		Om man vill upprepa något använder man sig av loopar. Det finns tre olika sorters loopar: while-loop, for-loop och do-while-loop. Man använder while-loopen när man inte vet hur många gånger man behöver upprepa något. Den kommer upprepa koden så länge styrvillkoret är sant. Det kan se ut såhär:
+		<code><br>
+			while(x &lt 10) {<br>
+				document.write(x);<br>
+				x += 1;<br>
+			}<br>
+		</code>
+		For-loopen används när man har ett bestämt antal gånger loopen ska upprepas, t.ex. om man ska bläddra igenom en array. Det kan se ut såhär:
+		<br><code>
+			for(var num=1; num &lt enArray.length; num++){<br>
+				document.write(enArray[num]);<br>
+			}<br>
+		</code>
+		Den sista loopen, do-while fungerar nästan precis som while-loopen men den går igenom koden minst en gång. Den kollar villkoret efter den har gått igenom sin kod. Ser ut såhär:
+		<code><br>
+		do{<br>
+			KOD HÄR!!<br>
+		}while(x &lt y)<br>
+		</code>
+	</p>
+
+	<h2>Funktioner</h2>
+	<p>
+		En funktion är en bit kod som kan anropas och användas flera gånger. Man skriver den på ett separat ställe i koden och anropar den via funktionsnamnet istället. En funktion skrivs såhär:
+		<code><br>
+			function funktionsNamn(){<br>
+			KOD HÄR<br>
+			}<br>
+		</code>
+		Man kan även skicka in variabler in i funktionen som sedan kan användas. Ett exempel är om man har funktionen <code>add</code> som tar emot två stycken tal som sedan ska adderas och efter det ska summan skickas tillbaka. Då ser koden ut såhär:
+		<code><br>
+			function add(tal1, tal2){
+				return tal1 + tal2;
+			}
+		</code><br>
+		Med <code>return</code> skickar man tillbaka värdet dit där funktionen anropades ifrån.
+	</p>
+	<h2>Reguljära uttryck</h2>
+	<p>
+		Reguljära uttryck är ett sätt att ange hur en sträng ska se ut. Man kan alltså med hjälp av regexp kontrollera att stängar som telefonnummer, e-postadresser osv. stämmer överrens med ett visst mönster. Man gör detta med hjälp av tecken. Exempelvis använder man \S för att ange vad som helst förutom ett mellanrum, \d för att ange ett nummer. Om man vill göra ett regex-uttryck för ett 10-siffrigt telefonnummer skulle det se ut såhär: <code>\d{3}-\d{7}</code>. Detta gäller för alla telefonnummer som är 3 siffror följt av ett bindestreck och sedan 7 siffror.
+	</p>
+	</body>
+<html>

@@ -1,0 +1,8 @@
+body
+{
+background: -webkit-linear-gradient(red, blue); 
+background: -o-linear-gradient(green, blue); 
+background: -moz-linear-gradient(yellow, blue); 
+background: -ms-linear-gradient(yellow, blue); 
+
+}
