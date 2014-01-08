@@ -1,0 +1,89 @@
+#change
+{
+	height: 200px;
+	width: 200px;
+	background-color:red;
+	border:1px solid black;
+	margin: 5px;
+}
+#newContent
+{
+	height: 200px;
+	width: 200px;
+	background-color:green;
+	border:1px solid black;
+	margin: 5px;
+}
+#remove
+{
+	height: 200px;
+	width: 200px;
+	background-color:yellow; 
+	border:1px solid black;
+	margin: 5px;
+}
+#getInfo
+{
+	height: 200px;
+	width: 200px;
+	background-color:pink; 
+	border:1px solid black;
+	margin: 5px;
+}
+#windowSize
+{
+	height: 200px;
+	width: 200px;
+	background-color:purple; 
+	border:1px solid black;
+	margin: 5px;
+}
+.toggleClass1
+{
+	height: 200px;
+	width: 200px;
+	background-color:gray; 
+	border:1px solid black;
+	margin: 5px;
+}
+.toggleClass2
+{
+	height: 200px;
+	width: 200px;
+	background-color:darkgray; 
+	border:1px solid black;
+	margin: 5px;
+}
+#hover
+{
+	height: 200px;
+	width: 200px;
+	background-color:lightblue; 
+	border:1px solid black;
+	margin: 5px;
+}
+#toggle2
+{
+	height: 200px;
+	width: 200px;
+	background-color:darkred; 
+	border:1px solid black;
+	margin: 5px;
+}
+#mousePosClick
+{
+	height: 200px;
+	width: 200px;
+	background-color:black;
+	color:white; 
+	border:1px solid black;
+	margin: 5px;
+}
+#removeEvent
+{
+	height: 200px;
+	width: 200px;
+	background-color:orange;
+	border:1px solid black;
+	margin: 5px;
+}

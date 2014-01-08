@@ -1,0 +1,20 @@
+#divLinkOpen
+{
+	background-color: red;
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+}
+#divLinkClose
+{
+	background-color: red;
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+}
+.box
+{
+	border: 1px solid black;
+	width: 50%;
+	margin-bottom: 5px;
+}

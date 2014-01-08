@@ -1,0 +1,48 @@
+#slide
+{
+	background-color: red;
+}
+#divHide
+{
+	background-color: green;
+	height: 100px;
+	width: 100px;
+}
+#divShow
+{
+	display: none;
+	background-color: yellow;
+	height: 100px;
+	width: 100px;
+}
+#divToggle
+{
+	background-color: lightblue;
+	height: 100px;
+	width: 100px;
+}
+#divFadeIn
+{
+	display: none;
+	background-color: orange;
+	height: 100px;
+	width: 100px;
+}
+#divFadeOut
+{
+	background-color: pink;
+	height: 100px;
+	width: 100px;
+}
+#divFadeToggle
+{
+	background-color: purple;
+	height: 100px;
+	width: 100px;
+}
+#divFadeTo
+{
+	background-color: black;
+	height: 100px;
+	width: 100px;
+}

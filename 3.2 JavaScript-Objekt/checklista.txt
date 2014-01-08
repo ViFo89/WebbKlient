@@ -1,0 +1,8 @@
+Array		Sida 1
+Boolean		Sida 1
+Date		Sida 2
+Math		Sida 1
+Number		Sida 1
+String		Sida 1
+RegExp		Sida 2
+Global		Sida 1

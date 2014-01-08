@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>3.4 Webbläsar-objekt Sida 1</title>
+		
+		<link rel="stylesheet" href="style.css">
+
+		<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<div id="example"></div>
+		<script>
+
+			txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+			txt+= "<p>Browser Name: " + navigator.appName + "</p>";
+			txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
+			txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+			txt+= "<p>Platform: " + navigator.platform + "</p>";
+			txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+			txt+= "<p>User-agent language: " + navigator.systemLanguage + "</p>";
+
+			document.getElementById("example").innerHTML=txt;
+
+		</script>
+		<h1>Webbläsar-objekt</h1>
+		<h2>Window</h2>
+		<h3>Egenskaper</h3>
+		<ul>
+			<li>defaultStatus - <span id="winDefSta"></span></li>
+			<li>status - <span id="winSta"></span></li>
+			<li>screenLeft - <span id="winScrLeft"></span></li>
+			<li>screenTop - <span id="winScrTop"></span></li>
+			<li>screenX - <span id="winScrX"></span></li>
+			<li>screenY - <span id="winScrY"></span></li>
+			<li>innerHeight - <span id="winInH"></span></li>
+			<li>innerWidth - <span id="winInW"></span></li>
+			<li>outerHeight - <span id="winOuH"></span></li>
+			<li>outerWidth - <span id="winOuW"></span></li>
+			<li>pageXOffset - <span id="winPaXOff"></span></li>
+			<li>pageYOffset - <span id="winPaYOff"></span></li>
+		</ul>
+		<h3>Metoder</h3>
+		<ul>
+			<li><a href="http://google.se" id="linkAlert">Klicka här för alert</a></li>
+			<li><a href="" id="linkPrompt">Klicka här för prompt</a></li>
+			<li><a href="" id="linkConfirm">Klicka här för confirm</a></li>
+			<li>Denna div fungerar som en länk -> <div id="divLinkOpen"></div></li>
+			<li>Denna div stänger det här fönstret -> <div id="divLinkClose"></div></li>
+			<li><input type="text" id="textInput"></li>
+			<li><a href="" id="linkFocus">Klicka här för att fokusera</a></li>
+			<li><a href="" id="linkBlur">Klicka här för blur</a></li>
+			<div class="box">
+				<li><a href="" id="setInterval">2 sekunder efter du klickat här kommer ett alarm, 2 sekunder efter det kommer ett till, osv...</a></li>
+				<li><a href="" id="clearInterval">Klicka här för att få popupen att sluta!</a></li>
+			</div>
+			<div class="box">
+				<li><a href="" id="setTimeout">2 Sekunder efter du klickat här kommer ett alarm.</a></li>
+				<li><a href="" id="clearTimeout">Klicka här för att stoppa alarmet.</a></li>
+			</div>
+			<div class="box">
+				<p>För att dessa fyra ska fungera måste du öppna ett nytt fönster genom att klicka på den första röda fyrkanten.</p>
+				<li><a href="" id="moveBy">moveBy</a></li>
+				<li><a href="" id="moveTo">moveTo</a></li>
+				<li><a href="" id="resizeBy">resizeBy</a></li>
+				<li><a href="" id="resizeTo">resizeTo</a></li>
+			</div>
+			<li><a href="" id="scrollBy">scrollBy</a></li>
+			<li><a href="" id="scrollTo">scrollTo</a></li>
+			<li><a href="" id="print">Skriv ut</a></li>
+		</ul>
+		<h2>Navigator</h2>
+		<ul>
+			<li>appCodeName - <span id="appCodeName"></span></li>
+			<li>appName - <span id="appName"></span></li>
+			<li>appVersion - <span id="appVersion"></span></li>
+			<li>platform - <span id="platform"></span></li>
+			<li>userAgent - <span id="userAgent"></span></li>
+			<li>cookieEnabled - <span id="cookieEnabled"></span></li>
+		</ul>
+		<h2>Screen</h2>
+		<ul>
+			<li>width - <span id="scrWidth"></span></li>
+			<li>height - <span id="scrHeight"></span></li>
+			<li>availWidth - <span id="availWidth"></span></li>
+			<li>availHeight - <span id="availHeight"></span></li>
+			<li>colorDepth - <span id="colorDepth"></span></li>
+			<li>pixelDepth - <span id="pixelDepth"></span></li>
+		</ul>
+		<h2>Location</h2>
+		<h3>Egenskaper</h3>
+		<ul>
+			<li>host - <span id="host"></span></li>
+			<li>hostname - <span id="hostname"></span></li>
+			<li>port - <span id="port"></span></li>
+			<li>href - <span id="href"></span></li>
+			<li>protocol - <span id="protocol"></span></li>
+			<li>pathname - <span id="pathname"></span></li>
+			<li>hash - <span id="hash"></span></li>
+			<li>search - <span id="search"></span></li>
+		</ul>
+		<h3>Metoder</h3>
+		<ul>
+			<li><a href="" id="assign">assign</a></li>
+			<li><a href="" id="reload">reload</a></li>
+			<li><a href="" id="replace">replace</a></li>
+		</ul>
+	</body>
+<html>
