@@ -1,0 +1,27 @@
+div
+{
+	display: inline-block;
+}
+#fileOptions
+{
+	float: left;
+	display: inline-block;
+	width: 200px;
+
+}
+#fileContent
+{
+	display: inline-block;
+	width: 400px;
+}
+#fileList
+{
+	border: 1px solid black;
+	width: 200px;
+	min-height: 500px;
+	vertical-align: top;
+}
+input[type="file"]
+{
+	display:none;
+}
