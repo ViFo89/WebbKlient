@@ -1,0 +1,16 @@
+ul
+{
+	margin: 0;
+	border: 0;
+}
+li
+{
+	border: 1px solid black;
+	width: 40px;
+	list-style: none;
+	background-color: red;
+}
+li:hover
+{
+	background-color: pink;
+}

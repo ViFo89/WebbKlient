@@ -1,0 +1,13 @@
+#drawingCanvas
+{
+	border: 1px solid black;
+}
+#save
+{
+	overflow: visible;
+	width: 25%;
+	border: 1px solid black;
+	overflow: auto;
+	float: right;
+	word-wrap: break-word;
+}

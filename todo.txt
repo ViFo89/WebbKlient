@@ -1,3 +1,4 @@
 Navigering - Sliding doors
 HTML - RSS
 Sidlayout - Elastisk webbsideslayaut ELLER Responsiv?
+3.6.1 inte klart, fungerar inte riktigt.

@@ -1,0 +1,22 @@
+form label, .label
+{
+	display: inline-block;
+	width: 125px;
+	text-align: right;
+	vertical-align: top;
+	margin-right: 15px;
+}
+form div
+{
+	margin: 4px 0;
+}
+form
+{
+	border: 1px solid black;
+	width: 33%;
+}
+span.error
+{
+	color:red;
+	font-weight: bold;
+}
